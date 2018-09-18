@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="content" style="padding: 10px 30px;">
-    <h1 class="topictitle" id="aws-resource-dynamodb-table">AWS::DynamoDB::Table</h1><p>The <code class="code">AWS::DynamoDB::Table</code> resource creates a DynamoDB table. For more information, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_CreateTable.html" target="_blank">CreateTable</a> in the <em>Amazon DynamoDB API Reference</em>.
+    <h1 class="topictitle" id="aws-resource-dynamodb-table">AWS::DynamoDB::Table</h1><p>The <code class="code">AWS::DynamoDB::Table</code> resource creates a DynamoDB table. For more information, see <a href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_CreateTable.html" target="_blank">CreateTable</a> in the <em>Amazon DynamoDB API Reference</em>.
                      </p><p>You should be aware of the following behaviors when working with DynamoDB tables:</p><div class="itemizedlist">
                         
                         
@@ -66,8 +66,8 @@
                         <p><strong>Topics</strong></p>
                         <ul>
                            <li><a href="#aws-resource-dynamodb-table-syntax">Syntax</a></li>
-                           <li><a href="#w2ab2c21c10d384c13">Properties</a></li>
-                           <li><a href="#w2ab2c21c10d384c15">Return Values</a></li>
+                           <li><a href="#w2ab1c21c10d385c13">Properties</a></li>
+                           <li><a href="#w2ab1c21c10d385c15">Return Values</a></li>
                            <li><a href="#cfn-dynamodb-table-examples">Examples</a></li>
                         </ul>
                      </div><h2 id="aws-resource-dynamodb-table-syntax">Syntax</h2><p>To declare this entity in your AWS CloudFormation template, use the following syntax:</p><div id="JSON" name="JSON" class="section langfilter">
@@ -76,47 +76,47 @@
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">{
   &quot;Type&quot; : &quot;AWS::DynamoDB::Table&quot;,
   &quot;Properties&quot; : {
-    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-attributedef"><code class="literal">AttributeDefinitions</code></a>&quot; : [ <em class="replaceable"><code>AttributeDefinition, ...</code></em> ],
-    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-gsi"><code class="literal">GlobalSecondaryIndexes</code></a>&quot; : [ <em class="replaceable"><code>GlobalSecondaryIndexes, ...</code></em> ],
-    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-keyschema"><code class="literal">KeySchema</code></a>&quot; : [ <em class="replaceable"><code>KeySchema, ...</code></em> ],
-    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-lsi"><code class="literal">LocalSecondaryIndexes</code></a>&quot; : [ <em class="replaceable"><code>LocalSecondaryIndexes, ...</code></em> ],
-    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-pointintimerecoveryspecification"><code class="code">PointInTimeRecoverySpecification</code></a>&quot; : <em class="replaceable"><code><a href="aws-properties-dynamodb-table-pointintimerecoveryspecification.html">PointInTimeRecoverySpecification</a></code></em>,
-    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-provisionedthroughput"><code class="literal">ProvisionedThroughput</code></a>&quot; : <em class="replaceable"><code>ProvisionedThroughput</code></em>,
-    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-ssespecification"><code class="code">SSESpecification</code></a>&quot; : <em class="replaceable"><code>SSESpecification</code></em>,
-    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-streamspecification"><code class="code">StreamSpecification</code></a>&quot; : <em class="replaceable"><code>StreamSpecification</code></em>,
-    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-tablename"><code class="literal">TableName</code></a>&quot; : <em class="replaceable"><code>String</code></em>,
-    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-tags"><code class="code">Tags</code></a>&quot; : [ <em class="replaceable"><code>Resource Tag, ...</code></em> ],
-    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-timetolivespecification"><code class="code">TimeToLiveSpecification</code></a>&quot; : <em class="replaceable"><code><a href="aws-properties-dynamodb-table-timetolivespecification.html">TimeToLiveSpecification</a></code></em>
+    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-attributedef">AttributeDefinitions</a>&quot; : [ <em class="replaceable"><code>AttributeDefinition, ...</code></em> ],
+    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-gsi">GlobalSecondaryIndexes</a>&quot; : [ <em class="replaceable"><code>GlobalSecondaryIndexes, ...</code></em> ],
+    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-keyschema">KeySchema</a>&quot; : [ <em class="replaceable"><code>KeySchema, ...</code></em> ],
+    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-lsi">LocalSecondaryIndexes</a>&quot; : [ <em class="replaceable"><code>LocalSecondaryIndexes, ...</code></em> ],
+    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-pointintimerecoveryspecification">PointInTimeRecoverySpecification</a>&quot; : <em class="replaceable"><code><a href="aws-properties-dynamodb-table-pointintimerecoveryspecification.html">PointInTimeRecoverySpecification</a></code></em>,
+    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-provisionedthroughput">ProvisionedThroughput</a>&quot; : <em class="replaceable"><code>ProvisionedThroughput</code></em>,
+    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-ssespecification">SSESpecification</a>&quot; : <em class="replaceable"><code>SSESpecification</code></em>,
+    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-streamspecification">StreamSpecification</a>&quot; : <em class="replaceable"><code>StreamSpecification</code></em>,
+    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-tablename">TableName</a>&quot; : <em class="replaceable"><code>String</code></em>,
+    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-tags">Tags</a>&quot; : [ <em class="replaceable"><code>Resource Tag, ...</code></em> ],
+    &quot;<a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-timetolivespecification">TimeToLiveSpecification</a>&quot; : <em class="replaceable"><code><a href="aws-properties-dynamodb-table-timetolivespecification.html">TimeToLiveSpecification</a></code></em>
   }
 }</code></pre>
                         </div><div id="YAML" name="YAML" class="section langfilter">
                         <h3 id="aws-resource-dynamodb-table-syntax.yaml">YAML</h3>
                         
-                        <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">Type: &quot;AWS::DynamoDB::Table&quot;
+                        <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">Type: AWS::DynamoDB::Table
 Properties:
-  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-attributedef"><code class="literal">AttributeDefinitions</code></a>:
+  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-attributedef">AttributeDefinitions</a>:
     - <em class="replaceable"><code>AttributeDefinition</code></em>
-  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-gsi"><code class="literal">GlobalSecondaryIndexes</code></a>:
+  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-gsi">GlobalSecondaryIndexes</a>:
     - <em class="replaceable"><code>GlobalSecondaryIndexes</code></em>
-  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-keyschema"><code class="literal">KeySchema</code></a>:
+  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-keyschema">KeySchema</a>:
     - <em class="replaceable"><code>KeySchema</code></em>
-  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-lsi"><code class="literal">LocalSecondaryIndexes</code></a>:
+  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-lsi">LocalSecondaryIndexes</a>:
     - <em class="replaceable"><code>LocalSecondaryIndexes</code></em>
-  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-pointintimerecoveryspecification"><code class="code">PointInTimeRecoverySpecification</code></a>: 
+  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-pointintimerecoveryspecification">PointInTimeRecoverySpecification</a>: 
     <em class="replaceable"><code><a href="aws-properties-dynamodb-table-pointintimerecoveryspecification.html">PointInTimeRecoverySpecification</a></code></em>
-  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-provisionedthroughput"><code class="literal">ProvisionedThroughput</code></a>:
+  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-provisionedthroughput">ProvisionedThroughput</a>:
     <em class="replaceable"><code>ProvisionedThroughput</code></em>
-  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-ssespecification"><code class="code">SSESpecification</code></a>:
+  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-ssespecification">SSESpecification</a>:
 &#xA0; &#xA0; <em class="replaceable"><code>SSESpecification</code></em>
-  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-streamspecification"><code class="code">StreamSpecification</code></a>:
+  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-streamspecification">StreamSpecification</a>:
     <em class="replaceable"><code>StreamSpecification</code></em>
-  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-tablename"><code class="literal">TableName</code></a>: <em class="replaceable"><code>String</code></em>
-  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-tags"><code class="code">Tags</code></a>: 
+  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-tablename">TableName</a>: <em class="replaceable"><code>String</code></em>
+  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-tags">Tags</a>: 
     - <em class="replaceable"><code>Resource Tag</code></em>
-  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-timetolivespecification"><code class="code">TimeToLiveSpecification</code></a>: 
+  <a href="aws-resource-dynamodb-table.html#cfn-dynamodb-table-timetolivespecification">TimeToLiveSpecification</a>: 
     <em class="replaceable"><code><a href="aws-properties-dynamodb-table-timetolivespecification.html">TimeToLiveSpecification</a></code></em>
 </code></pre>
-                        </div><h2 id="w2ab2c21c10d384c13">Properties</h2><div class="variablelist">
+                        </div><h2 id="w2ab1c21c10d385c13">Properties</h2><div class="variablelist">
                         
                         
                         
@@ -170,7 +170,7 @@ Properties:
                                     the index to complete creation because the backfilling phase can take a long time,
                                     depending on the size of the table. You can&apos;t use the index or update the table
                                     until the index&apos;s status is <code class="code">ACTIVE</code>. You can track its status by using
-                                    the DynamoDB <a href="http://docs.aws.amazon.com/cli/latest/reference/dynamodb/describe-table.html" target="_blank"><code class="code">DescribeTable</code></a> command.
+                                    the DynamoDB <a href="https://docs.aws.amazon.com/cli/latest/reference/dynamodb/describe-table.html" target="_blank"><code class="code">DescribeTable</code></a> command.
                                  </p>
                                  <p>If you add or delete an index during an update, we recommend that you don&apos;t
                                     update any other resources. If your stack fails to update and is rolled back while
@@ -387,15 +387,15 @@ Properties:
                         </dl>
                      </div><div class="aws-note">
                         <p class="aws-note">Note</p>
-                        <p>For detailed information about the limits in DynamoDB, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html" target="_blank">Limits in Amazon DynamoDB</a> in the
+                        <p>For detailed information about the limits in DynamoDB, see <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html" target="_blank">Limits in Amazon DynamoDB</a> in the
                            <em>Amazon DynamoDB Developer Guide</em>.
                         </p>
-                     </div><h2 id="w2ab2c21c10d384c15">Return Values</h2><h3 id="w2ab2c21c10d384c15b2">Ref</h3><p>When the logical ID of this resource is provided to the <code class="code">Ref</code> intrinsic
+                     </div><h2 id="w2ab1c21c10d385c15">Return Values</h2><h3 id="w2ab1c21c10d385c15b2">Ref</h3><p>When the logical ID of this resource is provided to the <code class="code">Ref</code> intrinsic
                         function, <code class="code">Ref</code> returns the resource name. For example:
                      </p><pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">{ &quot;Ref&quot;: &quot;<em class="replaceable"><code>MyResource</code></em>&quot; }</code></pre><p>For the resource with the logical ID <code class="code">myDynamoDBTable</code>,
                         <code class="code">Ref</code> will return the DynamoDB table name.
                      </p><p>For more information about using the <code class="code">Ref</code> function, see <a href="intrinsic-function-reference-ref.html">Ref</a>.
-                     </p><h3 id="w2ab2c21c10d384c15b4">Fn::GetAtt</h3><p><code class="code">Fn::GetAtt</code> returns a value for a specified attribute of this type.
+                     </p><h3 id="w2ab1c21c10d385c15b4">Fn::GetAtt</h3><p><code class="code">Fn::GetAtt</code> returns a value for a specified attribute of this type.
                         The following are the available attributes and sample return values.
                      </p><div class="variablelist">
                         
@@ -558,7 +558,7 @@ Properties:
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight ">AWSTemplateFormatVersion: &quot;2010-09-09&quot;
 Resources: 
   myDynamoDBTable: 
-    Type: &quot;AWS::DynamoDB::Table&quot;
+    Type: AWS::DynamoDB::Table
     Properties: 
       AttributeDefinitions: 
         - 
@@ -712,7 +712,7 @@ Resources:
                         <h4 id="aws-resource-dynamodb-table-example2.yaml">YAML</h4>
                         
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight ">mySecondDDBTable: 
-  Type: &quot;AWS::DynamoDB::Table&quot;
+  Type: AWS::DynamoDB::Table
   DependsOn: &quot;myFirstDDBTable&quot;
   Properties: 
     AttributeDefinitions: 
@@ -901,7 +901,7 @@ Resources:
                         
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight ">Resources:
   DDBTable:
-    Type: &quot;AWS::DynamoDB::Table&quot;
+    Type: AWS::DynamoDB::Table
     Properties:
       AttributeDefinitions:
         -
@@ -936,7 +936,7 @@ Resources:
         ReadCapacityUnits: 5
         WriteCapacityUnits: 5
   WriteCapacityScalableTarget:
-    Type: &quot;AWS::ApplicationAutoScaling::ScalableTarget&quot;
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
     Properties:
       MaxCapacity: 15
       MinCapacity: 5
@@ -948,7 +948,7 @@ Resources:
       ScalableDimension: dynamodb:table:WriteCapacityUnits
       ServiceNamespace: dynamodb
   ScalingRole:
-    Type: &quot;AWS::IAM::Role&quot;
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Version: &quot;2012-10-17&quot;
@@ -979,7 +979,7 @@ Resources:
                   - &quot;cloudwatch:DeleteAlarms&quot;
                 Resource: &quot;*&quot;
   WriteScalingPolicy:
-    Type: &quot;AWS::ApplicationAutoScaling::ScalingPolicy&quot;
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
     Properties:
       PolicyName: WriteAutoScalingPolicy
       PolicyType: TargetTrackingScaling

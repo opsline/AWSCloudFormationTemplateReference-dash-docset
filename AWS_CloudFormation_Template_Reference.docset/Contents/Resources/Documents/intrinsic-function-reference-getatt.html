@@ -121,7 +121,7 @@
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight ">AWSTemplateFormatVersion: 2010-09-09
 Resources:
   myELB:
-    Type: &apos;AWS::ElasticLoadBalancing::LoadBalancer&apos;
+    Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
       AvailabilityZones:
         - eu-west-1a
@@ -130,7 +130,7 @@ Resources:
           InstancePort: &apos;80&apos;
           Protocol: HTTP
   myELBIngressGroup:
-    Type: &apos;AWS::EC2::SecurityGroup&apos;
+    Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: ELB ingress group
       SecurityGroupIngress:
@@ -146,7 +146,7 @@ Resources:
                      </p><h2 id="intrinsic-function-reference-getatt-attrib">Attributes</h2><p>You can retrieve the following attributes using <code class="code">Fn::GetAtt</code>.
                      </p><div class="table">
                         <div class="table-contents">
-                           <table id="w328ab1c21c28c31c15b5">
+                           <table id="w397ab1c21c28c31c15b5">
                               
                               <tr>
                                  
@@ -605,6 +605,30 @@ Resources:
                                  <td>
                                     
                                     <p>The pipeline version. Example: <code class="code">1</code>
+                                       
+                                    </p>
+                                    
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p><a href="aws-resource-codepipeline-webhook.html">AWS::CodePipeline::Webhook</a></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p><code class="code">Url</code></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p>Example: <code class="code">https://eu-central-1.webhooks.aws/trigger123456</code>
                                        
                                     </p>
                                     
@@ -1289,6 +1313,28 @@ Resources:
                                     <p>A list of IPv6 CIDR blocks that are associated with the VPC.</p>
                                     
                                     <p>Example: <code class="code">[ 2001:db8:1234:1a00::/56 ]</code></p>
+                                    
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p><a href="aws-resource-ecr-repository.html">AWS::ECR::Repository</a></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p><code class="code">Arn</code></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p>Example: <code class="code">arn:aws:ecr:us-east-2:123456789012:repository/test-repository</code></p>
                                     
                                  </td>
                                  

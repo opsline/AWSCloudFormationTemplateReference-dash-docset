@@ -17,8 +17,8 @@
                            <li><a href="#aws-resource-autoscaling-autoscalinggroup-syntax">Syntax</a></li>
                            <li><a href="#aws-properties-as-group-prop">Properties</a></li>
                            <li><a href="#aws-properties-as-group-ref">Return Value</a></li>
-                           <li><a href="#w2ab2c21c10d138c15">Examples</a></li>
-                           <li><a href="#w2ab2c21c10d138c17">See Also</a></li>
+                           <li><a href="#w2ab1c21c10d135c15">Examples</a></li>
+                           <li><a href="#w2ab1c21c10d135c17">See Also</a></li>
                         </ul>
                      </div><h2 id="aws-resource-autoscaling-autoscalinggroup-syntax">Syntax</h2><p>To declare this entity in your AWS CloudFormation template, use the following syntax:</p><div id="JSON" name="JSON" class="section langfilter">
                         <h3 id="aws-resource-autoscaling-autoscalinggroup-syntax.json">JSON</h3>
@@ -35,25 +35,25 @@
       &quot;<a href="aws-properties-as-group.html#cfn-as-group-healthchecktype">HealthCheckType</a>&quot; : <em class="replaceable"><code>String</code></em>,
       &quot;<a href="aws-properties-as-group.html#cfn-as-group-instanceid">InstanceId</a>&quot; : <em class="replaceable"><code>String</code></em>,
       &quot;<a href="aws-properties-as-group.html#cfn-as-group-launchconfigurationname">LaunchConfigurationName</a>&quot; : <em class="replaceable"><code>String</code></em>,
-      &quot;<a href="aws-properties-as-group.html#cfn-as-group-launchtemplate"><code class="literal">LaunchTemplate</code></a>&quot; : <a href="aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html"><em class="replaceable"><code>LaunchTemplateSpecification</code></em></a>,
-      &quot;<a href="aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecificationlist"><code class="literal">LifecycleHookSpecificationList</code></a>&quot; : [ <a href="aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html"><em class="replaceable"><code>LifecycleHookSpecification</code></em></a>, ... ],
+      &quot;<a href="aws-properties-as-group.html#cfn-as-group-launchtemplate">LaunchTemplate</a>&quot; : <a href="aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html">LaunchTemplateSpecification</a>,
+      &quot;<a href="aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecificationlist">LifecycleHookSpecificationList</a>&quot; : [ <a href="aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html">LifecycleHookSpecification</a>, ... ],
       &quot;<a href="aws-properties-as-group.html#cfn-as-group-loadbalancernames">LoadBalancerNames</a>&quot; : [ <em class="replaceable"><code>String</code></em>, ... ],
       &quot;<a href="aws-properties-as-group.html#cfn-as-group-maxsize">MaxSize</a>&quot; : <em class="replaceable"><code>String</code></em>,
-      &quot;<a href="aws-properties-as-group.html#cfn-as-group-metricscollection"><code class="literal">MetricsCollection</code></a>&quot; : [ <a href="aws-properties-as-metricscollection.html"><em class="replaceable"><code>MetricsCollection</code></em></a>, ... ],
+      &quot;<a href="aws-properties-as-group.html#cfn-as-group-metricscollection">MetricsCollection</a>&quot; : [ <a href="aws-properties-as-metricscollection.html">MetricsCollection</a>, ... ],
       &quot;<a href="aws-properties-as-group.html#cfn-as-group-minsize">MinSize</a>&quot; : <em class="replaceable"><code>String</code></em>,
-      &quot;<a href="aws-properties-as-group.html#cfn-as-group-notificationconfigurations"><code class="literal">NotificationConfigurations</code></a>&quot; : [ <a href="aws-properties-as-notificationconfigurations.html"><em class="replaceable"><code>NotificationConfiguration</code></em></a>, ... ],
-      &quot;<a href="aws-properties-as-group.html#cfn-as-group-placementgroup"><code class="literal">PlacementGroup</code></a>&quot; : <em class="replaceable"><code>String</code></em>,
-      &quot;<a href="aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-servicelinkedrolearn"><code class="literal">ServiceLinkedRoleARN</code></a>&quot; : <em class="replaceable"><code>String</code></em>,
-      &quot;<a href="aws-properties-as-group.html#cfn-as-group-tags"><code class="code">Tags</code></a>&quot; : [ <a href="aws-properties-as-tags.html"><em class="replaceable"><code>TagProperty</code></em></a>, ... ],
-      &quot;<a href="aws-properties-as-group.html#cfn-as-group-targetgrouparns"><code class="code">TargetGroupARNs</code></a>&quot; : [ <em class="replaceable"><code>String, ...</code></em> ],
-      &quot;<a href="aws-properties-as-group.html#cfn-as-group-termpolicy"><code class="code">TerminationPolicies</code></a>&quot; : [ <em class="replaceable"><code>String</code></em>, ... ],
+      &quot;<a href="aws-properties-as-group.html#cfn-as-group-notificationconfigurations">NotificationConfigurations</a>&quot; : [ <a href="aws-properties-as-notificationconfigurations.html">NotificationConfiguration</a>, ... ],
+      &quot;<a href="aws-properties-as-group.html#cfn-as-group-placementgroup">PlacementGroup</a>&quot; : <em class="replaceable"><code>String</code></em>,
+      &quot;<a href="aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-servicelinkedrolearn">ServiceLinkedRoleARN</a>&quot; : <em class="replaceable"><code>String</code></em>,
+      &quot;<a href="aws-properties-as-group.html#cfn-as-group-tags">Tags</a>&quot; : [ <a href="aws-properties-as-tags.html">TagProperty</a>, ... ],
+      &quot;<a href="aws-properties-as-group.html#cfn-as-group-targetgrouparns">TargetGroupARNs</a>&quot; : [ <em class="replaceable"><code>String, ...</code></em> ],
+      &quot;<a href="aws-properties-as-group.html#cfn-as-group-termpolicy">TerminationPolicies</a>&quot; : [ <em class="replaceable"><code>String</code></em>, ... ],
       &quot;<a href="aws-properties-as-group.html#cfn-as-group-vpczoneidentifier">VPCZoneIdentifier</a>&quot; : [ <em class="replaceable"><code>String</code></em>, ... ]
    }
 }     </code></pre>
                         </div><div id="YAML" name="YAML" class="section langfilter">
                         <h3 id="aws-resource-autoscaling-autoscalinggroup-syntax.yaml">YAML</h3>
                         
-                        <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">Type: &quot;AWS::AutoScaling::AutoScalingGroup&quot;
+                        <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">Type: AWS::AutoScaling::AutoScalingGroup
 Properties:
   <a href="aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-autoscalinggroupname">AutoScalingGroupName</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-properties-as-group.html#cfn-as-group-availabilityzones">AvailabilityZones</a>:
@@ -64,24 +64,24 @@ Properties:
   <a href="aws-properties-as-group.html#cfn-as-group-healthchecktype">HealthCheckType</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-properties-as-group.html#cfn-as-group-instanceid">InstanceId</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-properties-as-group.html#cfn-as-group-launchconfigurationname">LaunchConfigurationName</a>: <em class="replaceable"><code>String</code></em>
-  <a href="aws-properties-as-group.html#cfn-as-group-launchtemplate"><code class="literal">LaunchTemplate</code></a>&quot; : <a href="aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html"><em class="replaceable"><code>LaunchTemplateSpecification</code></em></a>
-  <a href="aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecificationlist"><code class="literal">LifecycleHookSpecificationList</code></a>: 
-    - <a href="aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html"><em class="replaceable"><code>LifecycleHookSpecification</code></em></a>
+  <a href="aws-properties-as-group.html#cfn-as-group-launchtemplate">LaunchTemplate</a>: <a href="aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html">LaunchTemplateSpecification</a>
+  <a href="aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecificationlist">LifecycleHookSpecificationList</a>: 
+    - <a href="aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html">LifecycleHookSpecification</a>
   <a href="aws-properties-as-group.html#cfn-as-group-loadbalancernames">LoadBalancerNames</a>:
     - <em class="replaceable"><code>String</code></em>
   <a href="aws-properties-as-group.html#cfn-as-group-maxsize">MaxSize</a>: <em class="replaceable"><code>String</code></em>
-  <a href="aws-properties-as-group.html#cfn-as-group-metricscollection"><code class="literal">MetricsCollection</code></a>:
-    - <a href="aws-properties-as-metricscollection.html"><em class="replaceable"><code>MetricsCollection</code></em></a>
+  <a href="aws-properties-as-group.html#cfn-as-group-metricscollection">MetricsCollection</a>:
+    - <a href="aws-properties-as-metricscollection.html">MetricsCollection</a>
   <a href="aws-properties-as-group.html#cfn-as-group-minsize">MinSize</a>: <em class="replaceable"><code>String</code></em>
-  <a href="aws-properties-as-group.html#cfn-as-group-notificationconfigurations"><code class="literal">NotificationConfigurations</code></a>:
-    - <a href="aws-properties-as-notificationconfigurations.html"><em class="replaceable"><code>NotificationConfiguration</code></em></a>
-  <a href="aws-properties-as-group.html#cfn-as-group-placementgroup"><code class="literal">PlacementGroup</code></a>: <em class="replaceable"><code>String</code></em>
-  <a href="aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-servicelinkedrolearn"><code class="literal">ServiceLinkedRoleARN</code></a>: <em class="replaceable"><code>String</code></em>
-  <a href="aws-properties-as-group.html#cfn-as-group-tags"><code class="code">Tags</code></a>:
-    - <a href="aws-properties-as-tags.html"><em class="replaceable"><code>TagProperty</code></em></a>
-  <a href="aws-properties-as-group.html#cfn-as-group-targetgrouparns"><code class="code">TargetGroupARNs</code></a>:
+  <a href="aws-properties-as-group.html#cfn-as-group-notificationconfigurations">NotificationConfigurations</a>:
+    - <a href="aws-properties-as-notificationconfigurations.html">NotificationConfiguration</a>
+  <a href="aws-properties-as-group.html#cfn-as-group-placementgroup">PlacementGroup</a>: <em class="replaceable"><code>String</code></em>
+  <a href="aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-servicelinkedrolearn">ServiceLinkedRoleARN</a>: <em class="replaceable"><code>String</code></em>
+  <a href="aws-properties-as-group.html#cfn-as-group-tags">Tags</a>:
+    - <a href="aws-properties-as-tags.html">TagProperty</a>
+  <a href="aws-properties-as-group.html#cfn-as-group-targetgrouparns">TargetGroupARNs</a>:
     - <em class="replaceable"><code>String</code></em>
-  <a href="aws-properties-as-group.html#cfn-as-group-termpolicy"><code class="code">TerminationPolicies</code></a>:
+  <a href="aws-properties-as-group.html#cfn-as-group-termpolicy">TerminationPolicies</a>:
     - <em class="replaceable"><code>String</code></em>
   <a href="aws-properties-as-group.html#cfn-as-group-vpczoneidentifier">VPCZoneIdentifier</a>:
     - <em class="replaceable"><code>String</code></em>
@@ -356,7 +356,7 @@ Properties:
                               
                               <p>The lifecycle hooks for the group, which specify actions to perform when Auto Scaling
                                  launches or terminates instances. 
-                                 For more information, see <a href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html" target="_blank">
+                                 For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html" target="_blank">
                                     Amazon EC2 Auto Scaling Lifecycle Hooks</a> in the <em>Amazon EC2 Auto Scaling User Guide</em>.
                               </p>
                               
@@ -508,7 +508,7 @@ Properties:
                            <dd>
                               
                               <p>The Auto Scaling tags to attach to this resource. 
-                                 For more information about Auto Scaling tags, see <a href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html" target="_blank">Tagging
+                                 For more information about Auto Scaling tags, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html" target="_blank">Tagging
                                     Auto Scaling Groups and Instances</a> in the <em>Amazon EC2 Auto Scaling User Guide</em>.
                               </p>
                               
@@ -550,7 +550,7 @@ Properties:
                               </p>
                               
                               <p> For more information on configuring a termination policy for your Auto Scaling group,
-                                 see <a href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html" target="_blank">Controlling Which Auto Scaling Instances Terminate During Scale In</a> in the <em>Amazon EC2 Auto Scaling User Guide</em>. 
+                                 see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html" target="_blank">Controlling Which Auto Scaling Instances Terminate During Scale In</a> in the <em>Amazon EC2 Auto Scaling User Guide</em>. 
                               </p>
                               
                               <p><em>Required</em>: No
@@ -575,7 +575,7 @@ Properties:
                                  Zones.
                               </p>
                               
-                              <p>For more information, see <a href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html" target="_blank">Launching Auto Scaling Instances in a VPC</a> in the
+                              <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html" target="_blank">Launching Auto Scaling Instances in a VPC</a> in the
                                  <em>Amazon EC2 Auto Scaling User Guide</em>.
                               </p>
                               
@@ -605,8 +605,8 @@ Properties:
                         <code class="code">MyASGroup</code> Auto Scaling group, such as
                         <code class="code">mystack-myasgroup-NT5EUXTNTXXD</code>.
                      </p><pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight ">{ &quot;Ref&quot;: &quot;MyASGroup&quot; }</code></pre><p>For more information about using the <code class="code">Ref</code> function, see <a href="intrinsic-function-reference-ref.html">Ref</a>.
-                     </p><h2 id="w2ab2c21c10d138c15">Examples</h2><p>To view more Auto Scaling examples, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html">Auto Scaling Template Snippets</a>.
-                     </p><h3 id="w2ab2c21c10d138c15b4">Auto Scaling Group with an Elastic Load Balancing Load Balancer, Launch Configuration,
+                     </p><h2 id="w2ab1c21c10d135c15">Examples</h2><p>To view more Auto Scaling examples, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html">Auto Scaling Template Snippets</a>.
+                     </p><h3 id="w2ab1c21c10d135c15b4">Auto Scaling Group with an Elastic Load Balancing Load Balancer, Launch Configuration,
                         and
                         Metric Collection
                      </h3><div id="JSON" name="JSON" class="section langfilter">
@@ -635,7 +635,7 @@ Properties:
                         <h4 id="aws-resource-autoscaling-autoscalinggroup-example1.yaml">YAML</h4>
                         
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="yaml ">WebServerGroup: 
-  Type: &quot;AWS::AutoScaling::AutoScalingGroup&quot;
+  Type: AWS::AutoScaling::AutoScalingGroup
   Properties: 
     AvailabilityZones: 
       Fn::GetAZs: &quot;&quot;
@@ -651,7 +651,7 @@ Properties:
         Metrics: 
           - &quot;GroupMinSize&quot;
           - &quot;GroupMaxSize&quot;</code></pre>
-                        </div><h3 id="w2ab2c21c10d138c15b6">Batch Update Instances in an Auto Scaling Group</h3><p>The following example shows how to configure updates by including an <a href="aws-attribute-updatepolicy.html">UpdatePolicy</a>
+                        </div><h3 id="w2ab1c21c10d135c15b6">Batch Update Instances in an Auto Scaling Group</h3><p>The following example shows how to configure updates by including an <a href="aws-attribute-updatepolicy.html">UpdatePolicy</a>
                         attribute. The attribute contains an <code class="code">AutoScalingRollingUpdate</code> embedded
                         object with three attributes that specify the update policy settings.
                      </p><pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="json ">
@@ -670,7 +670,7 @@ Properties:
       &quot;MaxSize&quot; : &quot;3&quot;,
       &quot;MinSize&quot; : &quot;1&quot;
    }
-}</code></pre><h3 id="w2ab2c21c10d138c15b8">Auto Scaling Group Wait on Signals From New Instances</h3><p>In the following example, the Auto Scaling group waits for new Amazon EC2 instances
+}</code></pre><h3 id="w2ab1c21c10d135c15b8">Auto Scaling Group Wait on Signals From New Instances</h3><p>In the following example, the Auto Scaling group waits for new Amazon EC2 instances
                         to signal the
                         group before Auto Scaling proceeds to update the next batch of instances. In the <a href="aws-attribute-updatepolicy.html">UpdatePolicy</a>
                         attribute, the <code class="code">WaitOnResourceSignals</code> flag is set to <code class="code">true</code>. You
@@ -706,7 +706,7 @@ Properties:
       MaxBatchSize: &quot;1&quot;
       PauseTime: &quot;PT12M5S&quot;
       WaitOnResourceSignals: &quot;true&quot;
-  Type: &quot;AWS::AutoScaling::AutoScalingGroup&quot;
+  Type: AWS::AutoScaling::AutoScalingGroup
   Properties: 
     AvailabilityZones: 
       Fn::GetAZs: 
@@ -715,7 +715,7 @@ Properties:
       Ref: &quot;ASLC&quot;
     MaxSize: &quot;3&quot;
     MinSize: &quot;1&quot;</code></pre>
-                        </div><h2 id="w2ab2c21c10d138c17">See Also</h2><div class="itemizedlist">
+                        </div><h2 id="w2ab1c21c10d135c17">See Also</h2><div class="itemizedlist">
                         
                         
                         
@@ -728,7 +728,7 @@ Properties:
                            </li>
                            <li class="listitem">
                               
-                              <p><a href="http://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_UpdateAutoScalingGroup.html" target="_blank">UpdateAutoScalingGroup</a> in the <em>Amazon EC2 Auto Scaling API Reference</em></p>
+                              <p><a href="https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_UpdateAutoScalingGroup.html" target="_blank">UpdateAutoScalingGroup</a> in the <em>Amazon EC2 Auto Scaling API Reference</em></p>
                               
                            </li>
                            <li class="listitem">

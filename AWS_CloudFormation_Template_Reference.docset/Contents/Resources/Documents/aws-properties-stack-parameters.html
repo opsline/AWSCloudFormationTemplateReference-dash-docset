@@ -53,7 +53,7 @@ Parameters:
   KeyName: 
     Type: &quot;String&quot;
     Description: &quot;Name of an existing EC2 KeyPair to enable SSH access to the web server&quot;</code></pre>
-                        </div><h2 id="w2ab2c21c14d231c11">Nested Stack</h2><p>You could use the following template to embed a stack (myStackWithParams) using the
+                        </div><h2 id="w2ab1c21c14d241c11">Nested Stack</h2><p>You could use the following template to embed a stack (myStackWithParams) using the
                         EC2ChooseAMI.template and use the Parameters property in the AWS::CloudFormation::Stack
                         resource to specify an InstanceType and KeyName:
                      </p><div id="JSON" name="JSON" class="section langfilter">
@@ -66,7 +66,7 @@ Parameters:
       &quot;myStackWithParams&quot; : {
          &quot;Type&quot; : &quot;AWS::CloudFormation::Stack&quot;,
          &quot;Properties&quot; : {
-            &quot;TemplateURL&quot; : &quot;https://s3.amazonaws.com/cloudformation-templates-us-east-1/EC2ChooseAMI.template&quot;,
+            &quot;TemplateURL&quot; : &quot;https://s3.amazonaws.com/cloudformation-templates-us-east-2/EC2ChooseAMI.template&quot;,
             &quot;Parameters&quot; : {
                &quot;InstanceType&quot; : &quot;t1.micro&quot;,
                &quot;KeyName&quot; : &quot;mykey&quot;
@@ -81,9 +81,9 @@ Parameters:
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight ">AWSTemplateFormatVersion: &quot;2010-09-09&quot;
 Resources: 
   myStackWithParams: 
-    Type: &quot;AWS::CloudFormation::Stack&quot;
+    Type: AWS::CloudFormation::Stack
     Properties: 
-      TemplateURL: &quot;https://s3.amazonaws.com/cloudformation-templates-us-east-1/EC2ChooseAMI.template&quot;
+      TemplateURL: &quot;https://s3.amazonaws.com/cloudformation-templates-us-east-2/EC2ChooseAMI.template&quot;
       Parameters: 
         InstanceType: &quot;t1.micro&quot;
         KeyName: &quot;mykey&quot;</code></pre>

@@ -14,23 +14,23 @@
                         <h3 id="aws-properties-codecommit-repository-triggers-syntax.json">JSON</h3>
                         
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">{
-  &quot;<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-branches"><code class="code">Branches</code></a>&quot; : [ <em class="replaceable"><code>String, ...</code></em> ],
-  &quot;<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-customdata"><code class="code">CustomData</code></a>&quot; : <em class="replaceable"><code>String</code></em>,
-  &quot;<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-destinationarn"><code class="code">DestinationArn</code></a>&quot; : <em class="replaceable"><code>String</code></em>,
-  &quot;<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-events"><code class="code">Events</code></a>&quot; : [ <em class="replaceable"><code>String, ...</code></em> ],
-  &quot;<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-name"><code class="code">Name</code></a>&quot; : <em class="replaceable"><code>String</code></em>
+  &quot;<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-branches">Branches</a>&quot; : [ <em class="replaceable"><code>String, ...</code></em> ],
+  &quot;<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-customdata">CustomData</a>&quot; : <em class="replaceable"><code>String</code></em>,
+  &quot;<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-destinationarn">DestinationArn</a>&quot; : <em class="replaceable"><code>String</code></em>,
+  &quot;<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-events">Events</a>&quot; : [ <em class="replaceable"><code>String, ...</code></em> ],
+  &quot;<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-name">Name</a>&quot; : <em class="replaceable"><code>String</code></em>
 }</code></pre>
                         </div><div id="YAML" name="YAML" class="section langfilter">
                         <h3 id="aws-properties-codecommit-repository-triggers-syntax.yaml">YAML</h3>
                         
-                        <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight"><a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-branches"><code class="code">Branches</code></a>:
+                        <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight"><a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-branches">Branches</a>:
 - <em class="replaceable"><code>String</code></em>
-<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-customdata"><code class="code">CustomData</code></a>: <em class="replaceable"><code>String</code></em>
-<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-destinationarn"><code class="code">DestinationArn</code></a>: <em class="replaceable"><code>String</code></em>
-<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-events"><code class="code">Events</code></a>:
+<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-customdata">CustomData</a>: <em class="replaceable"><code>String</code></em>
+<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-destinationarn">DestinationArn</a>: <em class="replaceable"><code>String</code></em>
+<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-events">Events</a>:
 - <em class="replaceable"><code>String</code></em>
-<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-name"><code class="code">Name</code></a>: <em class="replaceable"><code>String</code></em></code></pre>
-                        </div><h2 id="w2ab2c21c14d389b7">Properties</h2><div class="variablelist">
+<a href="aws-properties-codecommit-repository-triggers.html#cfn-codecommit-repository-triggers-name">Name</a>: <em class="replaceable"><code>String</code></em></code></pre>
+                        </div><h2 id="w2ab1c21c14d399b7">Properties</h2><div class="variablelist">
                         
                         
                         
@@ -81,7 +81,7 @@
                            <dd>
                               
                               <p>The Amazon Resource Name (ARN) of the resource that is the target for this trigger.
-                                 For valid targets, see <a href="http://docs.aws.amazon.com/codecommit/latest/userguide/how-to-notify.html" target="_blank">Manage Triggers for
+                                 For valid targets, see <a href="https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-notify.html" target="_blank">Manage Triggers for
                                     an AWS CodeCommit Repository</a> in the <em>AWS CodeCommit User Guide</em>.
                               </p>
                               
@@ -101,7 +101,7 @@
                               <p>The repository events for which AWS CodeCommit sends information to the target, which
                                  you
                                  specified in the <code class="code">DestinationArn</code> property. If you don&apos;t specify events, the
-                                 trigger runs for all repository events. For valid values, see the <a href="http://docs.aws.amazon.com/codecommit/latest/APIReference/API_RepositoryTrigger.html" target="_blank">RepositoryTrigger</a> data type in
+                                 trigger runs for all repository events. For valid values, see the <a href="https://docs.aws.amazon.com/codecommit/latest/APIReference/API_RepositoryTrigger.html" target="_blank">RepositoryTrigger</a> data type in
                                  the <em>AWS CodeCommit API Reference</em>.
                               </p>
                               

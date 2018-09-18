@@ -9,7 +9,7 @@
 <body>
     <div id="content" style="padding: 10px 30px;">
     <h1 class="topictitle" id="aws-resource-batch-jobdefinition">AWS::Batch::JobDefinition</h1><p>The <code class="code">AWS::Batch::JobDefinition</code> resource specifies the parameters for an
-                        AWS Batch job definition. For more information, see <a href="http://docs.aws.amazon.com/batch/latest/userguide/job_definitions.html" target="_blank">Job Definitions</a> in the
+                        AWS Batch job definition. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/job_definitions.html" target="_blank">Job Definitions</a> in the
                         <em>AWS Batch User Guide</em>. 
                      </p><div class="highlights" id="inline-topiclist">
                         <p><strong>Topics</strong></p>
@@ -25,26 +25,32 @@
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">{
   &quot;Type&quot; : &quot;AWS::Batch::JobDefinition&quot;,
   &quot;Properties&quot; : {
-    &quot;<a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-type"><code class="code">Type</code></a>&quot; : <em class="replaceable"><code>String</code></em>,
-    &quot;<a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-parameters"><code class="code">Parameters</code></a>&quot; : <em class="replaceable"><code>Json object</code></em>,
-    &quot;<a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-containerproperties"><code class="code">ContainerProperties</code></a>&quot; : <a href="aws-properties-batch-jobdefinition-containerproperties.html"><em class="replaceable"><code>ContainerProperties</code></em></a>,
-    &quot;<a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-jobdefinitionname"><code class="code">JobDefinitionName</code></a>&quot; : <em class="replaceable"><code>String</code></em>,
-    &quot;<a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-retrystrategy"><code class="code">RetryStrategy</code></a>&quot; : <a href="aws-properties-batch-jobdefinition-retrystrategy.html"><em class="replaceable"><code>RetryStrategy</code></em></a>
+    &quot;<a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-type">Type</a>&quot; : <em class="replaceable"><code>String</code></em>,
+    &quot;<a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-parameters">Parameters</a>&quot; : <em class="replaceable"><code>Json object</code></em>,
+    &quot;<a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-containerproperties">ContainerProperties</a>&quot; : <a href="aws-properties-batch-jobdefinition-containerproperties.html">ContainerProperties</a>,
+    &quot;<a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-timeout">Timeout</a>&quot; : <a href="aws-properties-batch-jobdefinition-timeout.html">Timeout</a>,
+    &quot;<a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-jobdefinitionname">JobDefinitionName</a>&quot; : <em class="replaceable"><code>String</code></em>,
+    &quot;<a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-retrystrategy">RetryStrategy</a>&quot; : <a href="aws-properties-batch-jobdefinition-retrystrategy.html">RetryStrategy</a>
   }
 }</code></pre>
                         </div><div id="YAML" name="YAML" class="section langfilter">
                         <h3 id="aws-resource-batch-jobdefinition-syntax.yaml">YAML</h3>
                         
-                        <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">Type: &quot;AWS::Batch::JobDefinition&quot;
+                        <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">Type: AWS::Batch::JobDefinition
 Properties:
-  <a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-type"><code class="code">Type</code></a>: <em class="replaceable"><code>String</code></em>
-  <a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-parameters"><code class="code">Parameters</code></a>: <em class="replaceable"><code>Json object</code></em>
-  <a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-containerproperties"><code class="code">ContainerProperties</code></a>: 
-    <a href="aws-properties-batch-jobdefinition-containerproperties.html"><em class="replaceable"><code>ContainerProperties</code></em></a>
-  <a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-jobdefinitionname"><code class="code">JobDefinitionName</code></a>: <em class="replaceable"><code>String</code></em>
-  <a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-retrystrategy"><code class="code">RetryStrategy</code></a>: 
-    <a href="aws-properties-batch-jobdefinition-retrystrategy.html"><em class="replaceable"><code>RetryStrategy</code></em></a></code></pre>
+  <a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-type">Type</a>: <em class="replaceable"><code>String</code></em>
+  <a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-parameters">Parameters</a>: <em class="replaceable"><code>Json object</code></em>
+  <a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-containerproperties">ContainerProperties</a>: 
+    <a href="aws-properties-batch-jobdefinition-containerproperties.html">ContainerProperties</a>
+  <a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-timeout">Timeout</a>: 
+    <a href="aws-properties-batch-jobdefinition-timeout.html">Timeout</a>
+  <a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-jobdefinitionname">JobDefinitionName</a>: <em class="replaceable"><code>String</code></em>
+  <a href="aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-retrystrategy">RetryStrategy</a>: 
+    <a href="aws-properties-batch-jobdefinition-retrystrategy.html">RetryStrategy</a></code></pre>
                         </div><h2 id="aws-resource-batch-jobdefinition-properties">Properties</h2><div class="variablelist">
+                        
+                        
+                        
                         
                         
                         
@@ -81,7 +87,7 @@ Properties:
                               
                               <p>Default parameters or parameter substitution placeholders that are set in the
                                  job definition. Parameters are specified as a key-value pair mapping. For more
-                                 information about specifying parameters, see <a href="http://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html" target="_blank">Job Definition Parameters</a>
+                                 information about specifying parameters, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html" target="_blank">Job Definition Parameters</a>
                                  in the <em>AWS Batch User Guide</em>.
                               </p>
                               
@@ -146,6 +152,28 @@ Properties:
                            </dd>
                            
                            
+                           <dt><a id="cfn-batch-jobdefinition-timeout"></a><span class="term"><code class="code">Timeout</code></span></dt>
+                           
+                           <dd>
+                              
+                              <p>Specifies a job timeout configuration.</p>
+                              
+                              <p>
+                                 <em>Required</em>: No
+                              </p>
+                              
+                              <p>
+                                 <em>Type</em>: <a href="aws-properties-batch-jobdefinition-timeout.html">AWS Batch JobDefinition Timeout</a></p>
+                              
+                              <p>
+                                 <em>Update requires</em>: 
+                                 No Interruption
+                                 
+                              </p>
+                              
+                           </dd>
+                           
+                           
                            <dt><a id="cfn-batch-jobdefinition-retrystrategy"></a><span class="term"><code class="code">RetryStrategy</code></span></dt>
                            
                            <dd>
@@ -171,7 +199,7 @@ Properties:
                            </dd>
                            
                         </dl>
-                     </div><h2 id="aws-resource-batch-jobdefinition-returnvalues">Return Values</h2><h3 id="w2ab2c21c10d168c10b2">Ref</h3><p>When you pass the logical ID of an <code class="code">AWS::Batch::JobDefinition</code> resource
+                     </div><h2 id="aws-resource-batch-jobdefinition-returnvalues">Return Values</h2><h3 id="w2ab1c21c10d165c10b2">Ref</h3><p>When you pass the logical ID of an <code class="code">AWS::Batch::JobDefinition</code> resource
                         to the intrinsic <code class="code">Ref</code> function, the function returns the job definition ARN,
                         such as
                         <code class="code">arn:aws:batch:<em class="replaceable"><code>us-east-1</code></em>:<em class="replaceable"><code>111122223333</code></em>:job-definition/<em class="replaceable"><code>test-gpu</code></em>:<em class="replaceable"><code>2</code></em></code>. 
@@ -179,7 +207,7 @@ Properties:
                      </p><h2 id="aws-resource-batch-jobdefinition-examples">Examples</h2><h3 id="aws-resource-batch-jobdefinition-example1">Test <b>nvidia-smi</b></h3><p>The following example tests the <b>nvidia-smi</b> command on a GPU
                         instance to verify that the GPU is working inside the container. For more information,
                         see
-                        <a href="http://docs.aws.amazon.com/batch/latest/userguide/example-job-definitions.html#example-test-gpu" target="_blank">Test GPU Functionality</a> in the
+                        <a href="https://docs.aws.amazon.com/batch/latest/userguide/example-job-definitions.html#example-test-gpu" target="_blank">Test GPU Functionality</a> in the
                         <em>AWS Batch User Guide</em>.
                      </p><div id="JSON" name="JSON" class="section langfilter">
                         <h4 id="aws-resource-batch-jobdefinition-example1.json">JSON</h4>
@@ -223,7 +251,7 @@ Properties:
                         <h4 id="aws-resource-batch-jobdefinition-example1.yaml">YAML</h4>
                         
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight ">JobDefinition:
-  Type: &apos;AWS::Batch::JobDefinition&apos;
+  Type: AWS::Batch::JobDefinition
   Properties:
     Type: container
     JobDefinitionName: nvidia-smi
