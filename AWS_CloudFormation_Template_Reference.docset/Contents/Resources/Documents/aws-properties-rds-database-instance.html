@@ -54,7 +54,7 @@
     &quot;<a href="aws-properties-rds-database-instance.html#cfn-rds-dbinstance-domainIAMRoleName">DomainIAMRoleName</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-properties-rds-database-instance.html#cfn-rds-dbinstance-engine">Engine</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-properties-rds-database-instance.html#cfn-rds-dbinstance-engineversion">EngineVersion</a>&quot; : <em class="replaceable"><code>String</code></em>,
-    &quot;<a href="aws-properties-rds-database-instance.html#cfn-rds-dbinstance-iops">Iops</a>&quot; : <em class="replaceable"><code>Number</code></em>,
+    &quot;<a href="aws-properties-rds-database-instance.html#cfn-rds-dbinstance-iops">Iops</a>&quot; : <em class="replaceable"><code>Integer</code></em>,
     &quot;<a href="aws-properties-rds-database-instance.html#cfn-rds-dbinstance-kmskeyid">KmsKeyId</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-properties-rds-database-instance.html#cfn-rds-dbinstance-licensemodel">LicenseModel</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-properties-rds-database-instance.html#cfn-rds-dbinstance-masterusername">MasterUsername</a>&quot; : <em class="replaceable"><code>String</code></em>,
@@ -101,7 +101,7 @@ Properties:
   <a href="aws-properties-rds-database-instance.html#cfn-rds-dbinstance-domainIAMRoleName">DomainIAMRoleName</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-properties-rds-database-instance.html#cfn-rds-dbinstance-engine">Engine</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-properties-rds-database-instance.html#cfn-rds-dbinstance-engineversion">EngineVersion</a>: <em class="replaceable"><code>String</code></em>
-  <a href="aws-properties-rds-database-instance.html#cfn-rds-dbinstance-iops">Iops</a>: <em class="replaceable"><code>Number</code></em>
+  <a href="aws-properties-rds-database-instance.html#cfn-rds-dbinstance-iops">Iops</a>: <em class="replaceable"><code>Integer</code></em>
   <a href="aws-properties-rds-database-instance.html#cfn-rds-dbinstance-kmskeyid">KmsKeyId</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-properties-rds-database-instance.html#cfn-rds-dbinstance-licensemodel">LicenseModel</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-properties-rds-database-instance.html#cfn-rds-dbinstance-masterusername">MasterUsername</a>: <em class="replaceable"><code>String</code></em>
@@ -939,7 +939,7 @@ Properties:
                                  <code class="code">StorageType</code> property, you must specify this property.
                               </p>
                               
-                              <p><em>Type</em>: Number
+                              <p><em>Type</em>: Integer
                               </p>
                               
                               <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>
@@ -1548,7 +1548,7 @@ Properties:
                            </dd>
                            
                         </dl>
-                     </div><h2 id="updating-and-deleting-dbinstance-resources">Updating and Deleting AWS::RDS::DBInstance Resources</h2><h3 id="w2ab1c21c10d975c13b2">Updating DB Instances</h3><p>When properties labeled &quot;<em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement">Replacement</a>&quot; are updated, AWS CloudFormation first creates a
+                     </div><h2 id="updating-and-deleting-dbinstance-resources">Updating and Deleting AWS::RDS::DBInstance Resources</h2><h3 id="w2ab1c21c10d987c13b2">Updating DB Instances</h3><p>When properties labeled &quot;<em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement">Replacement</a>&quot; are updated, AWS CloudFormation first creates a
                         replacement DB instance, then changes references from other dependent resources to
                         point to
                         the replacement DB instance, and finally deletes the old DB instance.
@@ -1597,7 +1597,7 @@ Properties:
                            </ol>
                         </div>
                      </div><p>For more information about updating other properties of this resource, see <a href="https://docs.aws.amazon.com//AmazonRDS/latest/APIReference/API_ModifyDBInstance.html" target="_blank">ModifyDBInstance</a>. For more information about updating stacks, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html">AWS CloudFormation Stacks Updates</a>.
-                     </p><h3 id="w2ab1c21c10d975c13b4">Deleting DB Instances</h3><p>You can set a deletion policy for your DB instance to control how AWS CloudFormation
+                     </p><h3 id="w2ab1c21c10d987c13b4">Deleting DB Instances</h3><p>You can set a deletion policy for your DB instance to control how AWS CloudFormation
                         handles the
                         instance when the stack is deleted. For Amazon RDS DB instances, you can choose to
                         <em>retain</em> the instance, to <em>delete</em> the instance,

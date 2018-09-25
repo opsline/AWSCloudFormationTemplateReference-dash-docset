@@ -34,6 +34,7 @@
     &quot;<a href="aws-resource-codebuild-project.html#cfn-codebuild-project-encryptionkey">EncryptionKey</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-resource-codebuild-project.html#cfn-codebuild-project-environment">Environment</a>&quot; : <a href="aws-properties-codebuild-project-environment.html">Environment</a>,
     &quot;<a href="aws-resource-codebuild-project.html#cfn-codebuild-project-name">Name</a>&quot; : <em class="replaceable"><code>String</code></em>,
+    &quot;<a href="aws-resource-codebuild-project.html#cfn-codebuild-project-logsconfig">LogsConfig</a>&quot; : <a href="aws-properties-codebuild-project-logsconfig.html">LogsConfig</a>,
     &quot;<a href="aws-resource-codebuild-project.html#cfn-codebuild-project-secondary-artifacts">SecondaryArtifacts</a>&quot; : [<a href="aws-properties-codebuild-project-artifacts.html"> Artifacts, ... </a>],
     &quot;<a href="aws-resource-codebuild-project.html#cfn-codebuild-project-secondary-sources">SecondarySources</a>&quot; : [<a href="aws-properties-codebuild-project-source.html"> Source, ... </a>],
     &quot;<a href="aws-resource-codebuild-project.html#cfn-codebuild-project-servicerole">ServiceRole</a>&quot; : <em class="replaceable"><code>String</code></em>,
@@ -55,6 +56,7 @@ Properties:
   <a href="aws-resource-codebuild-project.html#cfn-codebuild-project-description">Description</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-codebuild-project.html#cfn-codebuild-project-encryptionkey">EncryptionKey</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-codebuild-project.html#cfn-codebuild-project-environment">Environment</a>: <a href="aws-properties-codebuild-project-environment.html">Environment</a>
+  <a href="aws-resource-codebuild-project.html#cfn-codebuild-project-logsconfig">LogsConfig</a>: <a href="aws-properties-codebuild-project-logsconfig.html">LogsConfig</a>        
   <a href="aws-resource-codebuild-project.html#cfn-codebuild-project-name">Name</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-codebuild-project.html#cfn-codebuild-project-secondary-artifacts">SecondaryArtifacts</a>: 
     - <a href="aws-properties-codebuild-project-artifacts.html">Artifacts</a>
@@ -74,6 +76,7 @@ Properties:
                         
                         
                         
+                              
                         
                         
                         
@@ -212,6 +215,22 @@ Properties:
                               </p>
                               
                               <p><em>Type</em>: <a href="aws-properties-codebuild-project-environment.html">AWS CodeBuild Project Environment</a></p>
+                              
+                              <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>
+                              
+                           </dd>
+                           
+                           
+                           <dt><a id="cfn-codebuild-project-logsconfig"></a><span class="term"><code class="code">LogsConfig</code></span></dt>
+                           
+                           <dd>
+                              
+                              <p>Information about logs for this build project.</p>
+                              
+                              <p><em>Required</em>: No
+                              </p>
+                              
+                              <p><em>Type</em>: <a href="aws-properties-codebuild-project-logsconfig.html">AWS CodeBuild Project LogsConfig</a></p>
                               
                               <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>
                               

@@ -37,7 +37,7 @@
                               
                            </li>
                         </ul>
-                     </div><h2 id="w2ab1c21c14d126c11">Syntax</h2><div id="JSON" name="JSON" class="section langfilter">
+                     </div><h2 id="w2ab1c21c14d136c11">Syntax</h2><div id="JSON" name="JSON" class="section langfilter">
                         <h3 id="aws-properties-as-tags-syntax.json">JSON</h3>
                         
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">{
@@ -52,7 +52,7 @@
 <a href="aws-properties-as-tags.html#cfn-as-tags-Value">Value</a>: <em class="replaceable"><code>String</code></em>
 <a href="aws-properties-as-tags.html#cfn-as-tags-PropagateAtLaunch">PropagateAtLaunch</a>: <em class="replaceable"><code>Boolean</code></em>
 </code></pre>
-                        </div><h2 id="w2ab1c21c14d126c13">Properties</h2><div class="variablelist">
+                        </div><h2 id="w2ab1c21c14d136c13">Properties</h2><div class="variablelist">
                         
                         
                         
@@ -125,20 +125,31 @@
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="json ">&quot;WebServerGroup&quot; : {
    &quot;Type&quot; : &quot;AWS::AutoScaling::AutoScalingGroup&quot;,
    &quot;Properties&quot; : {
-      &quot;AvailabilityZones&quot; : { &quot;Fn::GetAZs&quot; : &quot;&quot; },
-      &quot;LaunchConfigurationName&quot; : { &quot;Ref&quot; : &quot;LaunchConfig&quot; },
+      &quot;AvailabilityZones&quot; : { 
+         &quot;Fn::GetAZs&quot; : &quot;&quot; 
+      },
+      &quot;LaunchConfigurationName&quot; : { 
+         &quot;Ref&quot; : &quot;LaunchConfig&quot; 
+      },
       &quot;MinSize&quot; : &quot;1&quot;,
       &quot;MaxSize&quot; : &quot;2&quot;,
-      &quot;LoadBalancerNames&quot; : [ { &quot;Ref&quot; : &quot;ElasticLoadBalancer&quot; } ],
-      &quot;Tags&quot; : [ {
-         &quot;Key&quot; : &quot;MyTag1&quot;,
-         &quot;Value&quot; : &quot;Hello World 1&quot;,
-         &quot;PropagateAtLaunch&quot; : &quot;true&quot;
-      }, {
-         &quot;Key&quot; : &quot;MyTag2&quot;,
-         &quot;Value&quot; : &quot;Hello World 2&quot;,
-         &quot;PropagateAtLaunch&quot; : &quot;false&quot;
-      } ]
+      &quot;LoadBalancerNames&quot; : [ 
+         { 
+            &quot;Ref&quot; : &quot;ElasticLoadBalancer&quot; 
+         } 
+      ],
+      &quot;Tags&quot; : [ 
+         {
+            &quot;Key&quot; : &quot;MyTag1&quot;,
+            &quot;Value&quot; : &quot;Hello World 1&quot;,
+            &quot;PropagateAtLaunch&quot; : &quot;true&quot;
+         }, 
+         {
+            &quot;Key&quot; : &quot;MyTag2&quot;,
+            &quot;Value&quot; : &quot;Hello World 2&quot;,
+            &quot;PropagateAtLaunch&quot; : &quot;false&quot;
+         } 
+      ]
    }
 }     </code></pre>
                         </div><div id="YAML" name="YAML" class="section langfilter">

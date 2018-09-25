@@ -26,6 +26,7 @@
   &quot;Type&quot; : &quot;AWS::ApiGateway::Method&quot;,
   &quot;Properties&quot; : {
     &quot;<a href="aws-resource-apigateway-method.html#cfn-apigateway-method-apikeyrequired">ApiKeyRequired</a>&quot; : <em class="replaceable"><code>Boolean</code></em>,
+    &quot;<a href="aws-resource-apigateway-method.html#cfn-apigateway-method-authorizationscopes">AuthorizationScopes</a>&quot; : [ <em class="replaceable"><code><em class="replaceable"><code>String</code></em>, ...</code></em> ],
     &quot;<a href="aws-resource-apigateway-method.html#cfn-apigateway-method-authorizationtype">AuthorizationType</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-resource-apigateway-method.html#cfn-apigateway-method-authorizerid">AuthorizerId</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-resource-apigateway-method.html#cfn-apigateway-method-httpmethod">HttpMethod</a>&quot; : <em class="replaceable"><code>String</code></em>,
@@ -45,6 +46,8 @@
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">Type: AWS::ApiGateway::Method
 Properties:
   <a href="aws-resource-apigateway-method.html#cfn-apigateway-method-apikeyrequired">ApiKeyRequired</a>: <em class="replaceable"><code>Boolean</code></em>
+  <a href="aws-resource-apigateway-method.html#cfn-apigateway-method-authorizationscopes">AuthorizationScopes</a>: 
+    - <em class="replaceable"><code><em class="replaceable"><code>String</code></em></code></em>
   <a href="aws-resource-apigateway-method.html#cfn-apigateway-method-authorizationtype">AuthorizationType</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-apigateway-method.html#cfn-apigateway-method-authorizerid">AuthorizerId</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-apigateway-method.html#cfn-apigateway-method-httpmethod">HttpMethod</a>: <em class="replaceable"><code>String</code></em>
@@ -62,6 +65,9 @@ Properties:
   <a href="aws-resource-apigateway-method.html#cfn-apigateway-method-restapiid">RestApiId</a>: <em class="replaceable"><code>String</code></em>
 </code></pre>
                         </div><h2 id="w2ab1c21c10c64b9">Properties</h2><div class="variablelist">
+                        
+                        
+                        
                         
                         
                         
@@ -98,12 +104,44 @@ Properties:
                            
                            <dd>
                               
-                              <p>The method&apos;s authorization type.</p>
+                              <p>The method&apos;s authorization type. For valid values, see <a href="https://docs.aws.amazon.com/apigateway/api-reference/resource/method/" target="_blank">Method</a> in the
+                                 <em>API Gateway API Reference</em>.
+                              </p>
                               
-                              <p><em>Required</em>: Yes. If you specify the <code class="code">AuthorizerId</code> property, specify <code class="code">CUSTOM</code> for this property.
+                              <div class="aws-note">
+                                 <p class="aws-note">Note</p>
+                                 <p>If you specify the <code class="code">AuthorizerId</code> property, specify <code class="code">CUSTOM</code> for this property.
+                                 </p>
+                              </div>
+                              
+                              <p><em>Required</em>: Yes. 
                               </p>
                               
                               <p><em>Type</em>: String
+                              </p>
+                              
+                              <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>
+                              
+                           </dd>
+                           
+                           
+                           <dt><a id="cfn-apigateway-method-authorizationscopes"></a><span class="term"><code class="code">AuthorizationScopes</code></span></dt>
+                           
+                           <dd>
+                              
+                              <p>A list of authorization scopes configured on the method. The scopes are used with
+                                 a <code class="code">COGNITO_USER_POOLS</code> authorizer to authorize the method invocation. The authorization works by matching
+                                 the method scopes against the scopes parsed from the access token in the incoming
+                                 request. The method invocation is authorized if any method scopes matches a claimed
+                                 scope in the access token. Otherwise, the invocation is not authorized. When the method
+                                 scope is configured, the client must provide an access token instead of an identity
+                                 token for authorization purposes.
+                              </p>
+                              
+                              <p><em>Required</em>: No
+                              </p>
+                              
+                              <p><em>Type</em>: List of String values
                               </p>
                               
                               <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>

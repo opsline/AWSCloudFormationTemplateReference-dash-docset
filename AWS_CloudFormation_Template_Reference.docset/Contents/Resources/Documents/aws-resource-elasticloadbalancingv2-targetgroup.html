@@ -563,9 +563,9 @@ Properties:
   Type: AWS::ElasticLoadBalancingV2::Listener
   Properties:
     DefaultActions:
-      Type: forward
-      TargetGroupArn:
-        Ref: ALBTargetGroup
+      - Type: forward
+        TargetGroupArn:
+          Ref: ALBTargetGroup
     LoadBalancerArn:
         Ref: ApplicationLoadBalancer
     Port: 80

@@ -91,19 +91,35 @@
     &quot;AWSTemplateFormatVersion&quot; : &quot;2010-09-09&quot;,
     &quot;Mappings&quot; : {
         &quot;RegionMap&quot; : {
-            &quot;us-east-1&quot; : { &quot;AMI&quot; : &quot;ami-0ff8a91507f77f867&quot; },
-            &quot;us-west-1&quot; : { &quot;AMI&quot; : &quot;ami-0bdb828fd58c52235&quot; },
-            &quot;eu-west-1&quot; : { &quot;AMI&quot; : &quot;ami-047bb4163c506cd98&quot; },
-            &quot;ap-northeast-1&quot; : { &quot;AMI&quot; : &quot;ami-06cd52961ce9f0d85&quot; },
-            &quot;ap-southeast-1&quot; : { &quot;AMI&quot; : &quot;ami-08569b978cc4dfa10&quot; }
+            &quot;us-east-1&quot; : { 
+                &quot;AMI&quot; : &quot;ami-0ff8a91507f77f867&quot; 
+            },
+            &quot;us-west-1&quot; : { 
+                &quot;AMI&quot; : &quot;ami-0bdb828fd58c52235&quot; 
+            },
+            &quot;eu-west-1&quot; : { 
+                &quot;AMI&quot; : &quot;ami-047bb4163c506cd98&quot; 
+            },
+            &quot;ap-northeast-1&quot; : { 
+                &quot;AMI&quot; : &quot;ami-06cd52961ce9f0d85&quot; 
+            },
+            &quot;ap-southeast-1&quot; : { 
+                &quot;AMI&quot; : &quot;ami-08569b978cc4dfa10&quot; 
+            }
         }
     },
     &quot;Resources&quot; : {
         &quot;Ec2Instance&quot; : {
             &quot;Type&quot; : &quot;AWS::EC2::Instance&quot;,
             &quot;Properties&quot; : {
-                &quot;ImageId&quot; : {
-                   &quot;Fn::FindInMap&quot; : [ &quot;RegionMap&quot;, { &quot;Ref&quot; : &quot;AWS::Region&quot; }, &quot;AMI&quot; ]
+                &quot;ImageId&quot;: {
+                    &quot;Fn::FindInMap&quot;: [
+                        &quot;RegionMap&quot;,
+                        {
+                            &quot;Ref&quot;: &quot;AWS::Region&quot;
+                        },
+                        &quot;AMI&quot;
+                    ]
                 }
             },
             &quot;DependsOn&quot; : &quot;myDB&quot;
@@ -215,8 +231,12 @@ Resources:
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight ">&quot;GatewayToInternet&quot; : {
   &quot;Type&quot; : &quot;AWS::EC2::VPCGatewayAttachment&quot;,
   &quot;Properties&quot; : {
-    &quot;VpcId&quot; : { &quot;Ref&quot; : &quot;VPC&quot; },
-    &quot;InternetGatewayId&quot; : { &quot;Ref&quot; : &quot;InternetGateway&quot; }
+    &quot;VpcId&quot; : { 
+      &quot;Ref&quot; : &quot;VPC&quot; 
+    },
+    &quot;InternetGatewayId&quot; : { 
+      &quot;Ref&quot; : &quot;InternetGateway&quot; 
+    }
   }
 },
 
@@ -224,17 +244,44 @@ Resources:
   &quot;Type&quot; : &quot;AWS::EC2::Instance&quot;,
   &quot;DependsOn&quot; : &quot;GatewayToInternet&quot;,
   &quot;Properties&quot; : {
-    &quot;InstanceType&quot; : { &quot;Ref&quot; : &quot;EC2InstanceType&quot; },
-    &quot;KeyName&quot;  : { &quot;Ref&quot; : &quot;KeyName&quot; },
-    &quot;ImageId&quot;  : { &quot;Fn::FindInMap&quot; : [ &quot;AWSRegionArch2AMI&quot;, { &quot;Ref&quot; : &quot;AWS::Region&quot; },
-      { &quot;Fn::FindInMap&quot; : [ &quot;AWSInstanceType2Arch&quot;, { &quot;Ref&quot; : &quot;EC2InstanceType&quot; }, &quot;Arch&quot; ] } ] },
-    &quot;NetworkInterfaces&quot; : [{
-      &quot;GroupSet&quot;                 : [{ &quot;Ref&quot; : &quot;EC2SecurityGroup&quot; }],
-      &quot;AssociatePublicIpAddress&quot; : &quot;true&quot;,
-      &quot;DeviceIndex&quot;              : &quot;0&quot;,
-      &quot;DeleteOnTermination&quot;      : &quot;true&quot;,
-      &quot;SubnetId&quot;                 : { &quot;Ref&quot; : &quot;PublicSubnet&quot; }
-    }]
+    &quot;InstanceType&quot; : { 
+      &quot;Ref&quot; : &quot;EC2InstanceType&quot; 
+    },
+    &quot;KeyName&quot;  : { 
+      &quot;Ref&quot; : &quot;KeyName&quot; 
+    },
+    &quot;ImageId&quot;: {
+      &quot;Fn::FindInMap&quot;: [
+        &quot;AWSRegionArch2AMI&quot;,
+        {
+          &quot;Ref&quot;: &quot;AWS::Region&quot;
+        },
+        {
+          &quot;Fn::FindInMap&quot;: [
+            &quot;AWSInstanceType2Arch&quot;,
+            {
+              &quot;Ref&quot;: &quot;EC2InstanceType&quot;
+            },
+            &quot;Arch&quot;
+          ]
+        }
+      ]
+    },
+    &quot;NetworkInterfaces&quot; : [
+      {
+        &quot;GroupSet&quot; : [
+          { 
+            &quot;Ref&quot; : &quot;EC2SecurityGroup&quot; 
+          }
+        ],
+        &quot;AssociatePublicIpAddress&quot; : &quot;true&quot;,
+        &quot;DeviceIndex&quot; : &quot;0&quot;,
+        &quot;DeleteOnTermination&quot; : &quot;true&quot;,
+        &quot;SubnetId&quot; : { 
+          &quot;Ref&quot; : &quot;PublicSubnet&quot; 
+        }
+      }
+    ]
   }
 }</code></pre>
                         </div><div id="YAML" name="YAML" class="section langfilter">
@@ -281,19 +328,29 @@ EC2Host:
                         
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight ">&quot;service&quot;: {
   &quot;Type&quot;: &quot;AWS::ECS::Service&quot;,
-  &quot;DependsOn&quot;: [&quot;ECSAutoScalingGroup&quot;],
+  &quot;DependsOn&quot;: [
+    &quot;ECSAutoScalingGroup&quot;
+  ],
   &quot;Properties&quot; : {
-    &quot;Cluster&quot;: {&quot;Ref&quot;: &quot;ECSCluster&quot;},
+    &quot;Cluster&quot;: {
+      &quot;Ref&quot;: &quot;ECSCluster&quot;
+    },
     &quot;DesiredCount&quot;: &quot;1&quot;,
     &quot;LoadBalancers&quot;: [
       {
         &quot;ContainerName&quot;: &quot;simple-app&quot;,
         &quot;ContainerPort&quot;: &quot;80&quot;,
-        &quot;LoadBalancerName&quot; : { &quot;Ref&quot; : &quot;EcsElasticLoadBalancer&quot; }
+        &quot;LoadBalancerName&quot; : { 
+          &quot;Ref&quot; : &quot;EcsElasticLoadBalancer&quot; 
+        }
       }
     ],
-    &quot;Role&quot; : {&quot;Ref&quot;:&quot;ECSServiceRole&quot;},
-    &quot;TaskDefinition&quot; : {&quot;Ref&quot;:&quot;taskdefinition&quot;}
+    &quot;Role&quot; : {
+      &quot;Ref&quot;:&quot;ECSServiceRole&quot;
+    },
+    &quot;TaskDefinition&quot; : {
+      &quot;Ref&quot;:&quot;taskdefinition&quot;
+    }
   }
 }</code></pre>
                         </div><div id="YAML" name="YAML" class="section langfilter">

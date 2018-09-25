@@ -497,10 +497,118 @@
                         </dl>
                      </div><p>For an example that specifies the <code class="code">UpdatePolicy</code> attribute for an <code class="code">AWS::Lambda::Alias</code> resource, 
                         	  see <a href="aws-attribute-updatepolicy.html#aws-resource-lambda-alias-example">Lambda Alias Update Policy</a>.
-                     </p><h2 id="aws-attribute-updatepolicy-examples">Examples</h2><p>The following examples show how to add an update policy to an Auto Scaling group and
+                     </p><h2 id="cfn-attributes-updatepolicy-useonlineresharding">UseOnlineResharding Policy</h2><p>To modify a replication group&apos;s shards by adding or removing shards, rather than replacing
+                        the entire <a href="aws-resource-elasticache-replicationgroup.html">AWS::ElastiCache::ReplicationGroup</a> resource, use the
+                        <code class="code">UseOnlineResharding</code> update policy.
+                     </p><p>If <code class="code">UseOnlineResharding</code> is set to <code class="code">true</code>, you can update the
+                        <code class="code">NumNodeGroups</code> and <code class="code">NodeGroupConfiguration</code> properties of the
+                        <code class="code">AWS::ElastiCache::ReplicationGroup</code> resource, and CloudFormation will update those
+                        properties without interruption. When <code class="code">UseOnlineResharding</code> is set to
+                        <code class="code">false</code>, or not specified, updating the <code class="code">NumNodeGroups</code> and
+                        <code class="code">NodeGroupConfiguration</code> properties results in CloudFormation replacing the entire
+                        <code class="code">AWS::ElastiCache::ReplicationGroup</code> resource.
+                     </p><p>The <code class="code">UseOnlineResharding</code> update policy has no properties.
+                     </p><p>Things to consider when setting the <code class="code">UseOnlineResharding</code> update policy to
+                        <code class="code">true</code>:
+                     </p><div class="itemizedlist">
+                        
+                        
+                        
+                        
+                        <ul class="itemizedlist" type="disc">
+                           <li class="listitem">
+                              
+                              <p>We strongly recommend you perform updates to the <code class="code">NumNodeGroups</code> and
+                                 <code class="code">NodeGroupConfiguration</code> properties as the only updates in a given stack
+                                 update operation.
+                              </p>
+                              
+                              <p>Updating the node group configuration of a replication group is a resource-intensive
+                                 operation. If a stack update fails, CloudFormation does not roll back changes to the
+                                 node
+                                 group configuration of a replication group. However, CloudFormation will roll back
+                                 any
+                                 other properties that were changed as part of the failed update operation.
+                              </p>
+                              
+                           </li>
+                           <li class="listitem">  
+                              
+                              <p>Any node group updates require identifying all node groups</p>
+                              
+                              <p>If you specify the <code class="code">NodeGroupConfiguration</code> property, you must also specify
+                                 the NodeGroupId for each node group configuration in order for CloudFormation to update
+                                 the number of nodes without interruption. 
+                              </p>
+                              
+                              <p>When creating a replication group, if you do not specify an ID for each node group,
+                                 ElastiCache automatically generates an ID for each node group. To update the replication
+                                 group
+                                 without interruption, use the ElastiCache console (<a href="https://console.aws.amazon.com/elasticache/" target="_blank">https://console.aws.amazon.com/elasticache/</a>) or <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeReplicationGroups.html" target="_blank">DescribeReplicationGroups</a>
+                                 to retrieve the IDs for all node groups in the replication group. Then specify the
+                                 ID for
+                                 each node group in your stack template before attempting to add or remove shards.
+                              </p>
+                              
+                              <div class="aws-note">
+                                 <p class="aws-note">Note</p>
+                                 <p>As a best practice, when you create a replication group in a stack template, include
+                                    an
+                                    ID for each node group you specify.
+                                 </p>
+                              </div>
+                              
+                              <p>In addition, updating the number of nodes without interruption requires that you have
+                                 accurately specified the <code class="code">PrimaryAvailabilityZone</code>, <code class="code">ReplicaAvailabilityZones</code>, and <code class="code">ReplicaCount</code> properties for each <code class="code">NodeGroupConfiguration</code> as well. Again, you can use the ElastiCache console (<a href="https://console.aws.amazon.com/elasticache/" target="_blank">https://console.aws.amazon.com/elasticache/</a>) or <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeReplicationGroups.html" target="_blank">DescribeReplicationGroups</a> to retrieve the actual values for each node group and compare them to the values
+                                 in your stack template. You can update the property values of the node groups as a
+                                 separate stack update, or as part of the same stack update that changes the number
+                                 of node groups.
+                              </p>
+                              
+                              <p>When you use an <code class="code">UseOnlineResharding</code> update policy to update the number
+                                 of node groups without interruption, ElastiCache evenly distributes the keyspaces
+                                 between the specified number of slots. This cannot be updated later. Therefore, after
+                                 updating the number of node groups in this way, you should remove the value specified
+                                 for the <code class="code">Slots</code> property of each <code class="code">NodeGroupConfiguration</code> from the stack template, as it no longer reflects the actual values in each node
+                                 group.
+                              </p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p>Actual node group removal results may vary</p>
+                              
+                              <p>When you specify a <code class="code">NumNodeGroups</code> value that is less than the current
+                                 number of node groups, CloudFormation instructs ElastiCache to remove as many node
+                                 groups as
+                                 necessary to reach the specified number of nodes. However, ElastiCache may not always
+                                 be able to
+                                 remove the desired number of node groups. In the event ElastiCache cannot remove the
+                                 desired
+                                 number of node groups, CloudFormation generates a stack event alerting you to this.
+                                 In
+                                 cases where ElastiCache cannot remove <em>any</em> node groups, the CloudFormation
+                                 resource update fails.
+                              </p>
+                              
+                           </li>
+                        </ul>
+                     </div><p>For more information on modifying replication groups, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyReplicationGroupShardConfiguration.html" target="_blank">ModifyReplicationGroupShardConfiguration.html</a> 
+                        in the <em>Amazon ElastiCache API Reference</em>.
+                     </p><h3 id="cfn-attributes-updatepolicy-useonlineresharding-syntax">Syntax</h3><div id="JSON" name="JSON" class="section langfilter">
+                        <h4 id="cfn-attributes-updatepolicy-useonlineresharding-syntax.json">JSON</h4>
+                        <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">&quot;UpdatePolicy&quot; : {
+  &quot;<a href="aws-attribute-updatepolicy.html#cfn-attributes-updatepolicy-useonlineresharding">UseOnlineResharding</a>&quot; : <em class="replaceable"><code>Boolean</code></em>
+}</code></pre>
+                        </div><div id="YAML" name="YAML" class="section langfilter">
+                        <h4 id="cfn-attributes-updatepolicy-useonlineresharding-syntax.yaml">YAML</h4>
+                        <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">UpdatePolicy:
+  <a href="aws-attribute-updatepolicy.html#cfn-attributes-updatepolicy-useonlineresharding">UseOnlineResharding</a>: <em class="replaceable"><code>Boolean</code></em>
+</code></pre>
+                        </div><h2 id="aws-attribute-updatepolicy-examples">Examples</h2><p>The following examples show how to add an update policy to an Auto Scaling group and
                         how to
                         maintain availability when updating metadata.
-                     </p><h3 id="w2ab1c21c23c23c19b4">Add an UpdatePolicy to an Auto Scaling Group</h3><p>The following example shows how to add an update policy. During an update, the Auto
+                     </p><h3 id="w2ab1c21c23c23c21b4">Add an UpdatePolicy to an Auto Scaling Group</h3><p>The following example shows how to add an update policy. During an update, the Auto
                         Scaling
                         group updates instances in batches of two and keeps a minimum of one instance in service.
                         Because the <code class="code">WaitOnResourceSignals</code> flag is set, the Auto Scaling group waits for new
@@ -576,7 +684,7 @@ ScheduledAction:
     DesiredCapacity: &apos;2&apos;
     StartTime: &apos;2017-06-02T20 : 00 : 00Z&apos;
 </code></pre>
-                        </div><h3 id="w2ab1c21c23c23c19b6">AutoScalingReplacingUpdate Policy</h3><p>The following example declares a policy that forces an associated Auto Scaling group
+                        </div><h3 id="w2ab1c21c23c23c21b6">AutoScalingReplacingUpdate Policy</h3><p>The following example declares a policy that forces an associated Auto Scaling group
                         to be replaced during an update. For the update to succeed, a percentage of instances
                         (specified by the <code class="code">MinSuccessfulPercentParameter</code> parameter) must signal success within the <code class="code">Timeout</code> period.
                      </p><div id="JSON" name="JSON" class="section langfilter">
@@ -608,7 +716,7 @@ CreationPolicy:
     Timeout: PT10M
   AutoScalingCreationPolicy:
     MinSuccessfulInstancesPercent: !Ref &apos;MinSuccessfulPercentParameter&apos;</code></pre>
-                        </div><h3 id="w2ab1c21c23c23c19b8">Maintain Availability When Updating the Metadata for the cfn-init Helper
+                        </div><h3 id="w2ab1c21c23c23c21b8">Maintain Availability When Updating the Metadata for the cfn-init Helper
                         Script
                      </h3><p>When you install software applications on your instances, you might use the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html" target="_blank"><code class="code">AWS::CloudFormation::Init</code></a>
                         metadata key and the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html" target="_blank"><code>cfn-init</code></a> helper script to bootstrap the instances in your
@@ -632,7 +740,7 @@ CreationPolicy:
                         and then update the stack and any references pointing to the original logic ID (such
                         as the associated Auto Scaling group). AWS CloudFormation triggers a rolling update
                         on the Auto Scaling group, replacing all instances.
-                     </p><h3 id="w2ab1c21c23c23c19c10">Original Template</h3><pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight ">&quot;LaunchConfig&quot;: {
+                     </p><h3 id="w2ab1c21c23c23c21c10">Original Template</h3><pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight ">&quot;LaunchConfig&quot;: {
   &quot;Type&quot; : &quot;AWS::AutoScaling::LaunchConfiguration&quot;,
   &quot;Metadata&quot; : {
     &quot;Comment&quot; : &quot;Install a simple PHP application&quot;,
@@ -640,7 +748,7 @@ CreationPolicy:
     ...
     }
   }
-}</code></pre><h3 id="w2ab1c21c23c23c19c12">Updated Logical ID</h3><pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">&quot;<b>LaunchConfigUpdateRubygemsPkg</b>&quot;: {
+}</code></pre><h3 id="w2ab1c21c23c23c21c12">Updated Logical ID</h3><pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">&quot;<b>LaunchConfigUpdateRubygemsPkg</b>&quot;: {
   &quot;Type&quot; : &quot;AWS::AutoScaling::LaunchConfiguration&quot;,
   &quot;Metadata&quot; : {
     &quot;Comment&quot; : &quot;Install a simple PHP application&quot;,

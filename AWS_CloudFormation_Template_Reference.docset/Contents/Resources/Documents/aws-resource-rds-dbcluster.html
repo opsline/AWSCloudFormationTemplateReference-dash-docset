@@ -23,9 +23,9 @@
                         <p><strong>Topics</strong></p>
                         <ul>
                            <li><a href="#aws-resource-rds-dbcluster-syntax">Syntax</a></li>
-                           <li><a href="#w2ab1c21c10d966c15">Properties</a></li>
+                           <li><a href="#w2ab1c21c10d978c15">Properties</a></li>
                            <li><a href="#aws-resource-rds-dbcluster-ref">Return Values</a></li>
-                           <li><a href="#w2ab1c21c10d966c19">Example</a></li>
+                           <li><a href="#w2ab1c21c10d978c19">Example</a></li>
                         </ul>
                      </div><h2 id="aws-resource-rds-dbcluster-syntax">Syntax</h2><p>To declare this entity in your AWS CloudFormation template, use the following syntax:</p><div id="JSON" name="JSON" class="section langfilter">
                         <h3 id="aws-resource-rds-dbcluster-syntax.json">JSON</h3>
@@ -41,6 +41,7 @@
     &quot;<a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbclusterparametergroupname">DBClusterParameterGroupName</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbsubnetgroupname">DBSubnetGroupName</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engine">Engine</a>&quot; : <em class="replaceable"><code>String</code></em>,
+    &quot;<a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enginemode">EngineMode</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engineversion">EngineVersion</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-kmskeyid">KmsKeyId</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-masterusername">MasterUsername</a>&quot; : <em class="replaceable"><code>String</code></em>,
@@ -49,9 +50,10 @@
     &quot;<a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-preferredbackupwindow">PreferredBackupWindow</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-preferredmaintenancewindow">PreferredMaintenanceWindow</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-replicationsourceidentifier">ReplicationSourceIdentifier</a>&quot; : <em class="replaceable"><code>String</code></em>,
+    &quot;<a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-scalingconfiguration">ScalingConfiguration</a>&quot; : <a href="aws-properties-rds-dbcluster-scalingconfiguration.html">ScalingConfiguration</a>,
     &quot;<a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-snapshotidentifier">SnapshotIdentifier</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-storageencrypted">StorageEncrypted</a>&quot; : <em class="replaceable"><code>Boolean</code></em>,
-    &quot;<a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-tags">Tags</a>&quot; : [ <em class="replaceable"><code>Resource Tag, ...</code></em> ],
+    &quot;<a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-tags">Tags</a>&quot; : [ <a href="aws-properties-resource-tags.html">Resource Tag</a><em class="replaceable"><code>, ...</code></em> ],
     &quot;<a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-vpcsecuritygroupids">VpcSecurityGroupIds</a>&quot; : [ <em class="replaceable"><code>String, ...</code></em> ]
   }
 }</code></pre>
@@ -68,6 +70,7 @@ Properties:
   <a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbclusterparametergroupname">DBClusterParameterGroupName</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbsubnetgroupname">DBSubnetGroupName</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engine">Engine</a>: <em class="replaceable"><code>String</code></em>
+  <a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enginemode">EngineMode</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engineversion">EngineVersion</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-kmskeyid">KmsKeyId</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-masterusername">MasterUsername</a>: <em class="replaceable"><code>String</code></em>
@@ -76,14 +79,21 @@ Properties:
   <a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-preferredbackupwindow">PreferredBackupWindow</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-preferredmaintenancewindow">PreferredMaintenanceWindow</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-replicationsourceidentifier">ReplicationSourceIdentifier</a>: <em class="replaceable"><code>String</code></em>
+  <a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-scalingconfiguration">ScalingConfiguration</a>&quot; : <a href="aws-properties-rds-dbcluster-scalingconfiguration.html">ScalingConfiguration</a>
   <a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-snapshotidentifier">SnapshotIdentifier</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-storageencrypted">StorageEncrypted</a>: <em class="replaceable"><code>Boolean</code></em>
   <a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-tags">Tags</a>:
-    - <em class="replaceable"><code>Resource Tag</code></em>
+    - <a href="aws-properties-resource-tags.html">Resource Tag</a>
   <a href="aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-vpcsecuritygroupids">VpcSecurityGroupIds</a>:
     - <em class="replaceable"><code>String</code></em>
 </code></pre>
-                        </div><h2 id="w2ab1c21c10d966c15">Properties</h2><div class="variablelist">
+                        </div><h2 id="w2ab1c21c10d978c15">Properties</h2><div class="variablelist">
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -284,6 +294,24 @@ Properties:
                            </dd>
                            
                            
+                           <dt><a id="cfn-rds-dbcluster-enginemode"></a><span class="term"><code class="code">EngineMode</code></span></dt>
+                           
+                           <dd>
+                              
+                              <p>The DB engine mode of the DB cluster. Valid values include <code class="code">provisioned</code> or <code class="code">serverless</code>.
+                              </p>
+                              
+                              <p><em>Required</em>: No
+                              </p>
+                              
+                              <p><em>Type</em>: String
+                              </p>
+                              
+                              <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement">Replacement</a></p>
+                              
+                           </dd>
+                           
+                           
                            <dt><a id="cfn-rds-dbcluster-engineversion"></a><span class="term"><code class="code">EngineVersion</code></span></dt>
                            
                            <dd>
@@ -460,6 +488,23 @@ Properties:
                            </dd>
                            
                            
+                           <dt><a id="cfn-rds-dbcluster-scalingconfiguration"></a><span class="term"><code class="code">ScalingConfiguration</code></span></dt>
+                           
+                           <dd>
+                              
+                              <p>For DB clusters in <code class="code">serverless</code> DB engine mode, the scaling properties of the DB cluster.
+                              </p>
+                              
+                              <p><em>Required</em>: No
+                              </p>
+                              
+                              <p><em>Type</em>: <a href="aws-properties-rds-dbcluster-scalingconfiguration.html">Amazon RDS DBCluster ScalingConfiguration</a></p>
+                              
+                              <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>
+                              
+                           </dd>
+                           
+                           
                            <dt><a id="cfn-rds-dbcluster-snapshotidentifier"></a><span class="term"><code class="code">SnapshotIdentifier</code></span></dt>
                            
                            <dd>
@@ -535,10 +580,10 @@ Properties:
                            </dd>
                            
                         </dl>
-                     </div><h2 id="aws-resource-rds-dbcluster-ref">Return Values</h2><h3 id="w2ab1c21c10d966c17b2">Ref</h3><p>When the logical ID of this resource is provided to the <code class="code">Ref</code> intrinsic
+                     </div><h2 id="aws-resource-rds-dbcluster-ref">Return Values</h2><h3 id="w2ab1c21c10d978c17b2">Ref</h3><p>When the logical ID of this resource is provided to the <code class="code">Ref</code> intrinsic
                         function, <code class="code">Ref</code> returns the resource name.
                      </p><p>For more information about using the <code class="code">Ref</code> function, see <a href="intrinsic-function-reference-ref.html">Ref</a>.
-                     </p><h3 id="w2ab1c21c10d966c17b4">Fn::GetAtt</h3><p><code class="code">Fn::GetAtt</code> returns a value for a specified attribute of this type.
+                     </p><h3 id="w2ab1c21c10d978c17b4">Fn::GetAtt</h3><p><code class="code">Fn::GetAtt</code> returns a value for a specified attribute of this type.
                         The following are the available attributes and sample return values.
                      </p><div class="variablelist">
                         
@@ -581,7 +626,7 @@ Properties:
                            
                         </dl>
                      </div><p>For more information about using <code class="code">Fn::GetAtt</code>, see <a href="intrinsic-function-reference-getatt.html">Fn::GetAtt</a>.
-                     </p><h2 id="w2ab1c21c10d966c19">Example</h2><p>The following snippet creates an Amazon Aurora DB cluster and adds two DB instances
+                     </p><h2 id="w2ab1c21c10d978c19">Example</h2><p>The following snippet creates an Amazon Aurora DB cluster and adds two DB instances
                         to
                         it. Because Amazon RDS automatically assigns a writer and reader DB instances in the
                         cluster,

@@ -111,23 +111,41 @@
   ...
   &quot;Mappings&quot; : {
     &quot;RegionMap&quot; : {
-      &quot;us-east-1&quot; : { &quot;HVM64&quot; : &quot;ami-0ff8a91507f77f867&quot;, &quot;HVMG2&quot; : &quot;ami-0a584ac55a7631c0c&quot; },
-      &quot;us-west-1&quot; : { &quot;HVM64&quot; : &quot;ami-0bdb828fd58c52235&quot;, &quot;HVMG2&quot; : &quot;ami-066ee5fd4a9ef77f1&quot; },
-      &quot;eu-west-1&quot; : { &quot;HVM64&quot; : &quot;ami-047bb4163c506cd98&quot;, &quot;HVMG2&quot; : &quot;ami-0a7c483d527806435&quot; },
-      &quot;ap-southeast-1&quot; : { &quot;HVM64&quot; : &quot;ami-08569b978cc4dfa10&quot;, &quot;HVMG2&quot; : &quot;ami-0be9df32ae9f92309&quot; },
-      &quot;ap-northeast-1&quot; : { &quot;HVM64&quot; : &quot;ami-06cd52961ce9f0d85&quot;, &quot;HVMG2&quot; : &quot;ami-053cdd503598e4a9d&quot; }
+      &quot;us-east-1&quot; : { 
+        &quot;HVM64&quot; : &quot;ami-0ff8a91507f77f867&quot;, &quot;HVMG2&quot; : &quot;ami-0a584ac55a7631c0c&quot; 
+      },
+      &quot;us-west-1&quot; : { 
+        &quot;HVM64&quot; : &quot;ami-0bdb828fd58c52235&quot;, &quot;HVMG2&quot; : &quot;ami-066ee5fd4a9ef77f1&quot; 
+      },
+      &quot;eu-west-1&quot; : { 
+        &quot;HVM64&quot; : &quot;ami-047bb4163c506cd98&quot;, &quot;HVMG2&quot; : &quot;ami-0a7c483d527806435&quot; 
+      },
+      &quot;ap-southeast-1&quot; : { 
+        &quot;HVM64&quot; : &quot;ami-08569b978cc4dfa10&quot;, &quot;HVMG2&quot; : &quot;ami-0be9df32ae9f92309&quot; 
+      },
+      &quot;ap-northeast-1&quot; : { 
+        &quot;HVM64&quot; : &quot;ami-06cd52961ce9f0d85&quot;, &quot;HVMG2&quot; : &quot;ami-053cdd503598e4a9d&quot; 
+      }
     }
   },
 
   &quot;Resources&quot; : {
-     &quot;myEC2Instance&quot; : {
-        &quot;Type&quot; : &quot;AWS::EC2::Instance&quot;,
-        &quot;Properties&quot; : {
-           &quot;ImageId&quot; : { &quot;Fn::FindInMap&quot; : [ &quot;RegionMap&quot;, { &quot;Ref&quot; : &quot;AWS::Region&quot; }, &quot;HVM64&quot;]},
-           &quot;InstanceType&quot; : &quot;m1.small&quot;
-        }
-     }
- }
+    &quot;myEC2Instance&quot; : {
+      &quot;Type&quot; : &quot;AWS::EC2::Instance&quot;,
+      &quot;Properties&quot; : {
+        &quot;ImageId&quot; : { 
+          &quot;Fn::FindInMap&quot; : [ 
+            &quot;RegionMap&quot;, 
+            { 
+              &quot;Ref&quot; : &quot;AWS::Region&quot; 
+            }, 
+            &quot;HVM64&quot;
+          ]
+        },
+        &quot;InstanceType&quot; : &quot;m1.small&quot;
+      }   
+    }
+  }
 }</code></pre>
                         </div><div id="YAML" name="YAML" class="section langfilter">
                         <h3 id="intrinsic-function-reference-findinmap-example.yaml">YAML</h3>
@@ -153,7 +171,10 @@ Resources:
   myEC2Instance: 
     Type: &quot;AWS::EC2::Instance&quot;
     Properties: 
-      ImageId: !FindInMap [ RegionMap, !Ref &quot;AWS::Region&quot;, HVM64 ]
+      ImageId: !FindInMap
+        - RegionMap
+        - !Ref &apos;AWS::Region&apos;
+        - HVM64
       InstanceType: m1.small</code></pre>
                         </div><h2 id="w2ab1c21c28c26c13">Supported Functions</h2><p>You can use the following functions in a <code class="code">Fn::FindInMap</code> function:
                      </p><div class="itemizedlist">

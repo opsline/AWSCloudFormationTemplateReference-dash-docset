@@ -87,10 +87,17 @@ Fn::GetAZs: us-east-1</code></pre>
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight ">&quot;mySubnet&quot; : {
   &quot;Type&quot; : &quot;AWS::EC2::Subnet&quot;,
   &quot;Properties&quot; : {
-    &quot;VpcId&quot; : { &quot;Ref&quot; : &quot;VPC&quot; },
+    &quot;VpcId&quot; : { 
+      &quot;Ref&quot; : &quot;VPC&quot;   
+    },
     &quot;CidrBlock&quot; : &quot;10.0.0.0/24&quot;,
     &quot;AvailabilityZone&quot; : {
-      &quot;Fn::Select&quot; : [ &quot;0&quot;, { &quot;Fn::GetAZs&quot; : &quot;&quot; } ]
+      &quot;Fn::Select&quot; : [ 
+        &quot;0&quot;, 
+        { 
+          &quot;Fn::GetAZs&quot; : &quot;&quot; 
+        } 
+      ]
     }
   }
 }</code></pre>

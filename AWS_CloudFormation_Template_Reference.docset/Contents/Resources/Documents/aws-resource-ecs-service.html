@@ -14,10 +14,10 @@
                         <p><strong>Topics</strong></p>
                         <ul>
                            <li><a href="#aws-resource-ecs-service-syntax">Syntax</a></li>
-                           <li><a href="#w2ab1c21c10d582b9">Properties</a></li>
-                           <li><a href="#w2ab1c21c10d582c11">Return Values</a></li>
-                           <li><a href="#w2ab1c21c10d582c13">Examples</a></li>
-                           <li><a href="#w2ab1c21c10d582c15">More Info</a></li>
+                           <li><a href="#aws-resource-ecs-service-properties">Properties</a></li>
+                           <li><a href="#aws-resource-ecs-service-return-values">Return Values</a></li>
+                           <li><a href="#aws-resource-ecs-service-examples">Examples</a></li>
+                           <li><a href="#aws-resource-ecs-service-seealso">More Info</a></li>
                         </ul>
                      </div><h2 id="aws-resource-ecs-service-syntax">Syntax</h2><p>To declare this entity in your AWS CloudFormation template, use the following syntax:</p><div id="JSON" name="JSON" class="section langfilter">
                         <h3 id="aws-resource-ecs-service-syntax.json">JSON</h3>
@@ -36,6 +36,7 @@
     &quot;<a href="aws-resource-ecs-service.html#cfn-ecs-service-role">Role</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-resource-ecs-service.html#cfn-ecs-service-placementstrategies">PlacementStrategies</a>&quot; : [ <em class="replaceable"><code>PlacementStrategies, ...</code></em> ],
     &quot;<a href="aws-resource-ecs-service.html#cfn-ecs-service-platformversion">PlatformVersion</a>&quot; : <em class="replaceable"><code>String</code></em>,
+    &quot;<a href="aws-resource-ecs-service.html#cfn-ecs-service-schedulingstrategy">SchedulingStrategy</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-resource-ecs-service.html#cfn-ecs-service-servicename">ServiceName</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-resource-ecs-service.html#cfn-ecs-service-serviceregistries">ServiceRegistries</a>&quot; : [ <a href="aws-properties-ecs-service-serviceregistry.html">ServiceRegistry</a>, ... ,
     &quot;<a href="aws-resource-ecs-service.html#cfn-ecs-service-taskdefinition">TaskDefinition</a>&quot; : <em class="replaceable"><code>String</code></em>
@@ -64,12 +65,13 @@ Properties:
   <a href="aws-resource-ecs-service.html#cfn-ecs-service-placementstrategies">PlacementStrategies</a>: 
    - <em class="replaceable"><code>PlacementStrategies, ...</code></em>
   <a href="aws-resource-ecs-service.html#cfn-ecs-service-platformversion">PlatformVersion</a>: <em class="replaceable"><code>String</code></em>
-  <a href="aws-resource-ecs-service.html#cfn-ecs-service-role">Role</a>: <em class="replaceable"><code>String</code></em>
+  <a href="aws-resource-ecs-service.html#cfn-ecs-service-role">Role</a>: <em class="replaceable"><code>String</code></em> 
+  <a href="aws-resource-ecs-service.html#cfn-ecs-service-schedulingstrategy">SchedulingStrategy</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-ecs-service.html#cfn-ecs-service-servicename">ServiceName</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-ecs-service.html#cfn-ecs-service-serviceregistries">ServiceRegistries</a>: 
    - <a href="aws-properties-ecs-service-serviceregistry.html">ServiceRegistry</a>
   <a href="aws-resource-ecs-service.html#cfn-ecs-service-taskdefinition">TaskDefinition</a>: <em class="replaceable"><code>String</code></em></code></pre>
-                        </div><h2 id="w2ab1c21c10d582b9">Properties</h2><p>For more information on properties and valid parameters, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html" target="_blank">CreateService</a> in the
+                        </div><h2 id="aws-resource-ecs-service-properties">Properties</h2><p>For more information on properties and valid parameters, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html" target="_blank">CreateService</a> in the
                         <em>Amazon Elastic Container Service API Reference</em>.
                      </p><div class="aws-note">
                         <p class="aws-note">Note</p>
@@ -82,6 +84,9 @@ Properties:
                            the Amazon ECS cluster before AWS CloudFormation creates the Amazon ECS service.
                         </p>
                      </div><div class="variablelist">
+                        
+                        
+                        
                         
                         
                         
@@ -338,6 +343,56 @@ Properties:
                            </dd>
                            
                            
+                           <dt><a id="cfn-ecs-service-schedulingstrategy"></a><span class="term"><code class="code">SchedulingStrategy</code></span></dt>
+                           
+                           <dd>
+                              
+                              <p>The scheduling strategy to use for the service. </p>
+                              
+                              
+                              <p>There are two service scheduler strategies available:</p>
+                              
+                              <div class="itemizedlist">
+                                 
+                                 
+                                 
+                                 <ul class="itemizedlist" type="disc">
+                                    <li class="listitem">
+                                       <p><code class="code">REPLICA</code>: The replica scheduling strategy places and maintains the desired number of tasks
+                                          across your cluster. By default, the service scheduler spreads tasks across Availability
+                                          Zones. You can use task placement strategies and constraints to customize task placement
+                                          decisions.
+                                       </p>
+                                    </li>
+                                    <li class="listitem">
+                                       <p><code class="code">DAEMON</code>: The daemon scheduling strategy deploys exactly one task on each container instance
+                                          in your cluster. When using this strategy, do not specify a desired number of tasks
+                                          or any task placement strategies.
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </div>
+                              
+                              <p>Valid values include <code class="code">REPLICA</code> and <code class="code">DAEMON</code>.
+                              </p>
+                              
+                              <div class="aws-note">
+                                 <p class="aws-note">Note</p>
+                                 <p>Fargate tasks do not support the <code class="code">DAEMON</code> scheduling strategy
+                                 </p>
+                              </div>
+                              
+                              <p><em>Required</em>: No
+                              </p>
+                              
+                              <p><em>Type</em>: String
+                              </p>
+                              
+                              <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement">Replacement</a></p>
+                              
+                           </dd>
+                           
+                           
                            <dt><a id="cfn-ecs-service-servicename"></a><span class="term"><code class="code">ServiceName</code></span></dt>
                            
                            <dd>
@@ -370,7 +425,7 @@ Properties:
                               
                               <p><em>Type</em>: <a href="aws-properties-ecs-service-serviceregistry.html">Amazon ECS Service ServiceRegistry</a></p>
                               
-                              <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>
+                              <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement">Replacement</a></p>
                               
                            </dd>
                            
@@ -399,7 +454,7 @@ Properties:
                            </dd>
                            
                         </dl>
-                     </div><h2 id="w2ab1c21c10d582c11">Return Values</h2><h3 id="w2ab1c21c10d582c11b2">Ref</h3><p>When the logical ID of this resource is provided to the <code class="code">Ref</code>
+                     </div><h2 id="aws-resource-ecs-service-return-values">Return Values</h2><h3 id="w2ab1c21c10d582c11b2">Ref</h3><p>When the logical ID of this resource is provided to the <code class="code">Ref</code>
                         intrinsic function, <code class="code">Ref</code> returns the ARN.
                      </p><p>In the following sample, the <code class="code">Ref</code> function returns the ARN of the
                         <code class="code">MyECSService</code> service, such as
@@ -423,7 +478,7 @@ Properties:
                            
                         </dl>
                      </div><p>For more information about using <code class="code">Fn::GetAtt</code>, see <a href="intrinsic-function-reference-getatt.html">Fn::GetAtt</a>.
-                     </p><h2 id="w2ab1c21c10d582c13">Examples</h2><h3 id="w2ab1c21c10d582c13b2">Define a Basic Amazon ECS Service</h3><p>The following examples define an Amazon ECS service that uses a cluster and task
+                     </p><h2 id="aws-resource-ecs-service-examples">Examples</h2><h3 id="w2ab1c21c10d582c13b2">Define a Basic Amazon ECS Service</h3><p>The following examples define an Amazon ECS service that uses a cluster and task
                         definition that are declared elsewhere in the same template.
                      </p><div id="JSON" name="JSON" class="section langfilter">
                         <h4 id="aws-resource-ecs-service-example.json">JSON</h4>
@@ -823,7 +878,7 @@ Outputs:
   Cluster:
     Value: !Ref cluster
 </code></pre>
-                        </div><h2 id="w2ab1c21c10d582c15">More Info</h2><div class="itemizedlist">
+                        </div><h2 id="aws-resource-ecs-service-seealso">More Info</h2><div class="itemizedlist">
                         
                         
                         

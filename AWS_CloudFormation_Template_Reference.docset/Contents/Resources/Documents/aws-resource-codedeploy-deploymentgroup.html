@@ -35,8 +35,10 @@
     &quot;<a href="aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-deploymentgroupname">DeploymentGroupName</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-deploymentstyle">DeploymentStyle</a>&quot; : <a href="aws-properties-codedeploy-deploymentgroup-deploymentstyle.html">DeploymentStyle</a>,
     &quot;<a href="aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-ec2tagfilters">Ec2TagFilters</a>&quot; : [ <a href="aws-properties-codedeploy-deploymentgroup-ec2tagfilters.html">Ec2TagFilter, ...</a> ],
+    &quot;<a href="aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-ec2tagset">Ec2TagSet</a>&quot; : <a href="aws-properties-codedeploy-deploymentgroup-ec2tagset.html">Ec2TagSet</a>,
     &quot;<a href="aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-loadbalancerinfo">LoadBalancerInfo</a>&quot; : <a href="aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.html">LoadBalancerInfo</a>,
     &quot;<a href="aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters">OnPremisesInstanceTagFilters</a>&quot; : [ <a href="aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.html">OnPremisesInstanceTagFilter, ...</a> ],
+    &quot;<a href="aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-onpremisestagset">OnPremisesInstanceTagSet</a>&quot; : <a href="aws-properties-codedeploy-deploymentgroup-onpremisestagset.html">OnPremisesInstanceTagSet</a>,
     &quot;<a href="aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-servicerolearn">ServiceRoleArn</a>&quot; : <em class="replaceable"><code>String</code></em>,
     &quot;<a href="aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-triggerconfigurations">TriggerConfigurations</a>&quot; : [ <a href="aws-properties-codedeploy-deploymentgroup-triggerconfig.html">TriggerConfig, ...</a> ]
   }
@@ -61,15 +63,23 @@ Properties:
     <a href="aws-properties-codedeploy-deploymentgroup-deploymentstyle.html">DeploymentStyle</a>
   <a href="aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-ec2tagfilters">Ec2TagFilters</a>:
     - <a href="aws-properties-codedeploy-deploymentgroup-ec2tagfilters.html">Ec2TagFilters</a>
+  <a href="aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-ec2tagset">Ec2TagSet</a> : <a href="aws-properties-codedeploy-deploymentgroup-ec2tagset.html">Ec2TagSet</a>
   <a href="aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-loadbalancerinfo">LoadBalancerInfo</a>: 
     <a href="aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.html">LoadBalancerInfo</a>
   <a href="aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters">OnPremisesInstanceTagFilters</a>:
     - <a href="aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.html">OnPremisesInstanceTagFilters</a>
+  <a href="aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-onpremisestagset">OnPremisesInstanceTagSet</a>: <a href="aws-properties-codedeploy-deploymentgroup-onpremisestagset.html">OnPremisesInstanceTagSet</a>
   <a href="aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-servicerolearn">ServiceRoleArn</a>: <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-triggerconfigurations">TriggerConfigurations</a>:
     - <a href="aws-properties-codedeploy-deploymentgroup-triggerconfig.html">TriggerConfig</a>
 </code></pre>
                         </div><h2 id="w2ab1c21c10d267b9">Properties</h2><div class="variablelist">
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -288,11 +298,35 @@ Properties:
                                  Duplicates are not allowed.
                               </p>
                               
+                              <p>You can specify <code class="code">EC2TagFilters</code> or <code class="code">Ec2TagSet</code>, but not both.
+                              </p>
+                              
                               <p><em>Required</em>: No
                               </p>
                               
                               <p><em>Type</em>: List of <a href="aws-properties-codedeploy-deploymentgroup-ec2tagfilters.html">AWS CodeDeploy DeploymentGroup
                                     Ec2TagFilters</a></p>
+                              
+                              <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>
+                              
+                           </dd>
+                           
+                           
+                           <dt><a id="cfn-codedeploy-deploymentgroup-ec2tagset"></a><span class="term"><code class="code">Ec2TagSet</code></span></dt>
+                           
+                           <dd>
+                              
+                              <p>Specifies information about groups of tags applied to EC2 instances. The deployment
+                                 group will include only EC2 instances identified by all the tag groups.
+                              </p>
+                              
+                              <p>You can specify <code class="code">EC2TagFilters</code> or <code class="code">Ec2TagSet</code>, but not both.
+                              </p>
+                              
+                              <p><em>Required</em>: No
+                              </p>
+                              
+                              <p><em>Type</em>: <a href="aws-properties-codedeploy-deploymentgroup-ec2tagset.html">AWS CodeDeploy DeploymentGroup EC2TagSet</a></p>
                               
                               <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>
                               
@@ -336,11 +370,35 @@ Properties:
                                  <em>AWS CodeDeploy User Guide</em>. Duplicates are not allowed.
                               </p>
                               
+                              <p>You can specify <code class="code">OnPremisesInstanceTagFilters</code> or <code class="code">OnPremisesInstanceTagSet</code>, but not both.
+                              </p>
+                              
                               <p><em>Required</em>: No
                               </p>
                               
                               <p><em>Type</em>: List of <a href="aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.html">AWS CodeDeploy
-                                    DeploymentGroup OnPremisesInstanceTagFilters</a></p>
+                                    DeploymentGroup TagFilters</a></p>
+                              
+                              <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>
+                              
+                           </dd>
+                           
+                           
+                           <dt><a id="cfn-codedeploy-deploymentgroup-onpremisestagset"></a><span class="term"><code class="code">OnPremisesInstanceTagSet</code></span></dt>
+                           
+                           <dd>
+                              
+                              <p>Information about groups of tags applied to on-premises instances. The deployment
+                                 group will include only on-premises instances identified by all the tag groups.
+                              </p>
+                              
+                              <p>You can specify <code class="code">OnPremisesInstanceTagFilters</code> or <code class="code">OnPremisesInstanceTagSet</code>, but not both.
+                              </p>
+                              
+                              <p><em>Required</em>: No
+                              </p>
+                              
+                              <p><em>Type</em>:<a href="aws-properties-codedeploy-deploymentgroup-onpremisestagset.html">AWS CodeDeploy DeploymentGroup OnPremisesTagSet</a></p>
                               
                               <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>
                               

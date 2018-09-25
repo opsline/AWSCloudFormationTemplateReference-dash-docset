@@ -8,22 +8,21 @@
 </head>
 <body>
     <div id="content" style="padding: 10px 30px;">
-    <h1 class="topictitle" id="intrinsic-function-reference-getatt"><code class="code">Fn::GetAtt</code></h1><p>The <code class="code">Fn::GetAtt</code> intrinsic function returns the value of an attribute
-                        from a resource in the template.
+    <h1 class="topictitle" id="intrinsic-function-reference-getatt"><code class="code">Fn::GetAtt</code></h1><p>The <code class="code">Fn::GetAtt</code> intrinsic function returns the value of an attribute from a
+                        resource in the template.
                      </p><h2 id="getatt-declaration">Declaration</h2><div id="JSON" name="JSON" class="section langfilter">
                         
-                        <h3 id="intrinsic-function-reference-getatt-syntax.json">JSON</h3>          
+                        <h3 id="intrinsic-function-reference-getatt-syntax.json">JSON</h3>
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">{ &quot;Fn::GetAtt&quot; : [ &quot;<em class="replaceable"><code>logicalNameOfResource</code></em>&quot;, &quot;<em class="replaceable"><code>attributeName</code></em>&quot; ] }</code></pre>
                         </div><div id="YAML" name="YAML" class="section langfilter">
                         
-                        <h3 id="intrinsic-function-reference-getatt-syntax.yaml">YAML</h3>          
-                        
+                        <h3 id="intrinsic-function-reference-getatt-syntax.yaml">YAML</h3> 
                         <p>Syntax for the full function name:</p>
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">Fn::GetAtt: [ <em class="replaceable"><code>logicalNameOfResource</code></em>, <em class="replaceable"><code>attributeName</code></em> ]</code></pre>
                         <p>Syntax for the short form:</p>
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">!GetAtt <em class="replaceable"><code>logicalNameOfResource</code></em>.<em class="replaceable"><code>attributeName</code></em></code></pre>
                         </div><h2 id="getatt-parameters">Parameters</h2><div class="variablelist">
-                         
+                        
                         
                         
                         <dl>
@@ -32,8 +31,8 @@
                            
                            <dd>
                               
-                              <p>The logical name (also called <em>logical ID</em>) of the resource that contains the attribute that you
-                                 want.
+                              <p>The logical name (also called <em>logical ID</em>) of the resource that
+                                 contains the attribute that you want.
                               </p>
                               
                            </dd>
@@ -44,30 +43,29 @@
                            <dd>
                               
                               <p>The name of the resource-specific attribute whose value you want. See the resource&apos;s
-                                 reference page
-                                 for details about the attributes available for that resource type.
+                                 reference page for details about the attributes available for that resource type.
                               </p>
                               
                            </dd>
                            
                         </dl>
                      </div><h2 id="intrinsic-function-reference-getatt-return">Return Value</h2><p>The attribute value.</p><h2 id="intrinsic-function-reference-getatt-examples">Examples</h2><h3 id="intrinsic-function-reference-getatt-example">Return a String</h3><p>This example snippet returns a string containing the DNS name of the load balancer
-                        with the
-                        logical name <code class="code">myELB</code>.
+                        with
+                        the logical name <code class="code">myELB</code>.
                      </p><div id="JSON" name="JSON" class="section langfilter">
                         
-                        <h4 id="intrinsic-function-reference-getatt-example.json">JSON</h4>             
+                        <h4 id="intrinsic-function-reference-getatt-example.json">JSON</h4>
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight ">&quot;Fn::GetAtt&quot; : [ &quot;myELB&quot; , &quot;DNSName&quot; ]</code></pre>
                         </div><div id="YAML" name="YAML" class="section langfilter">
                         
-                        <h4 id="intrinsic-function-reference-getatt-example.yaml">YAML</h4>             
+                        <h4 id="intrinsic-function-reference-getatt-example.yaml">YAML</h4>
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight ">!GetAtt myELB.DNSName</code></pre>
-                        </div><h4 id="intrinsic-function-reference-getatt-example2">Return Multiple Strings</h4><p>The following example template returns the <code class="code">SourceSecurityGroup.OwnerAlias</code> and 
-                        <code class="code">SourceSecurityGroup.GroupName</code> of the load balancer with the 
-                        logical name <code class="code">myELB</code>.
+                        </div><h4 id="intrinsic-function-reference-getatt-example2">Return Multiple Strings</h4><p>The following example template returns the <code class="code">SourceSecurityGroup.OwnerAlias</code>
+                        and <code class="code">SourceSecurityGroup.GroupName</code> of the load balancer with the logical name
+                        <code class="code">myELB</code>.
                      </p><div id="JSON" name="JSON" class="section langfilter">
                         
-                        <h5 id="intrinsic-function-reference-getatt-example2.json">JSON</h5>                
+                        <h5 id="intrinsic-function-reference-getatt-example2.json">JSON</h5>
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight ">{
     &quot;AWSTemplateFormatVersion&quot;: &quot;2010-09-09&quot;,
     &quot;Resources&quot;: {
@@ -117,7 +115,7 @@
 }</code></pre>
                         </div><div id="YAML" name="YAML" class="section langfilter">
                         
-                        <h5 id="intrinsic-function-reference-getatt-example2.yaml">YAML</h5>                
+                        <h5 id="intrinsic-function-reference-getatt-example2.yaml">YAML</h5>
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight ">AWSTemplateFormatVersion: 2010-09-09
 Resources:
   myELB:
@@ -139,14 +137,14 @@ Resources:
           ToPort: &apos;80&apos;
           SourceSecurityGroupOwnerId: !GetAtt myELB.SourceSecurityGroup.OwnerAlias
           SourceSecurityGroupName: !GetAtt myELB.SourceSecurityGroup.GroupName</code></pre>
-                        </div><h2 id="getatt-supported-functions">Supported Functions</h2><p>For the <code class="code">Fn::GetAtt</code> logical resource name, you cannot use functions. You
-                        must specify a string that is a resource&apos;s logical ID.
+                        </div><h2 id="getatt-supported-functions">Supported Functions</h2><p>For the <code class="code">Fn::GetAtt</code> logical resource name, you cannot use functions. You must
+                        specify a string that is a resource&apos;s logical ID.
                      </p><p>For the <code class="code">Fn::GetAtt</code> attribute name, you can use the <code class="code">Ref</code>
                         function.
                      </p><h2 id="intrinsic-function-reference-getatt-attrib">Attributes</h2><p>You can retrieve the following attributes using <code class="code">Fn::GetAtt</code>.
                      </p><div class="table">
                         <div class="table-contents">
-                           <table id="w397ab1c21c28c31c15b5">
+                           <table id="w400ab1c21c28c31c15b5">
                               
                               <tr>
                                  
@@ -178,9 +176,7 @@ Resources:
                                  <td><code class="code">ConfigurationId</code></td>
                                  
                                  <td>
-                                    <p>The unique ID that Amazon MQ generates for the
-                                       configuration.
-                                    </p>Example:
+                                    <p>The unique ID that Amazon MQ generates for the configuration.</p>Example:
                                     <code class="code">c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9</code></td>
                                  
                               </tr>
@@ -204,9 +200,7 @@ Resources:
                                  <td><code class="code">Arn</code></td>
                                  
                                  <td>
-                                    <p>The Amazon Resource Name (ARN) of the Amazon MQ
-                                       configuration.
-                                    </p>Example:
+                                    <p>The Amazon Resource Name (ARN) of the Amazon MQ configuration.</p>Example:
                                     <code class="code">arn:aws:mq:us-east-2:123456789012:configuration:MyConfigurationDevelopment:c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9</code></td>
                                  
                               </tr>
@@ -290,9 +284,7 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>The Amazon Resource Name (ARN) of the AWS Cloud9 development
-                                       environment.
-                                    </p>
+                                    <p>The Amazon Resource Name (ARN) of the AWS Cloud9 development environment.</p>
                                     
                                     <p>Example:
                                        <code class="code">arn:aws:cloud9:us-east-2:123456789012:environment:2bc3642873c342e485f7e0c561234567</code></p>
@@ -342,10 +334,9 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>A JSON-format string containing the <code class="code">UniqueId</code> and
-                                       <code class="code">Data</code> values from the wait condition signal(s) for the
-                                       specified wait condition. For more information about wait condition signals,
-                                       see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html#using-cfn-waitcondition-signaljson">Wait Condition Signal JSON
+                                    <p>A JSON-format string containing the <code class="code">UniqueId</code> and <code class="code">Data</code>
+                                       values from the wait condition signal(s) for the specified wait condition. For more
+                                       information about wait condition signals, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html#using-cfn-waitcondition-signaljson">Wait Condition Signal JSON
                                           Format</a>.
                                     </p>
                                     
@@ -372,8 +363,8 @@ Resources:
                                  <td>
                                     
                                     <p>The output value from the nested stack that you specified, where
-                                       <em class="replaceable"><code>NestedStackOutputName</code></em> is the name of the
-                                       output value.
+                                       <em class="replaceable"><code>NestedStackOutputName</code></em> is the name of the output
+                                       value.
                                     </p>
                                     
                                  </td>
@@ -418,7 +409,8 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example: <code class="code">arn:aws:cloudtrail:us-east-2:123456789012:trail/myCloudTrail</code></p>
+                                    <p>Example:
+                                       <code class="code">arn:aws:cloudtrail:us-east-2:123456789012:trail/myCloudTrail</code></p>
                                     
                                  </td>
                                  
@@ -438,13 +430,14 @@ Resources:
                                     
                                  </td>
                                  
-                                 <td>                     
+                                 <td>
                                     
                                     <p>The Amazon Resource Name (ARN) of the Amazon SNS topic that is associated with the
                                        CloudTrail trail.
                                     </p>
                                     
-                                    <p>Example: <code class="code">arn:aws:sns:us-east-2:123456789012:mySNSTopic</code></p>
+                                    <p>Example:
+                                       <code class="code">arn:aws:sns:us-east-2:123456789012:mySNSTopic</code></p>
                                     
                                  </td>
                                  
@@ -466,7 +459,8 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example: <code class="code">arn:aws:cloudwatch:us-east-2:123456789012:alarm:myCloudWatchAlarm-CPUAlarm-UXMMZK36R55Z</code></p>
+                                    <p>Example:
+                                       <code class="code">arn:aws:cloudwatch:us-east-2:123456789012:alarm:myCloudWatchAlarm-CPUAlarm-UXMMZK36R55Z</code></p>
                                     
                                  </td>
                                  
@@ -720,7 +714,8 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example: <code class="code">arn:aws:dax:us-east-1:111122223333:cache/MyDAXCluster</code></p>
+                                    <p>Example:
+                                       <code class="code">arn:aws:dax:us-east-1:111122223333:cache/MyDAXCluster</code></p>
                                     
                                  </td>
                                  
@@ -742,7 +737,8 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example: <code class="code">mydaxcluster.0h3d6x.clustercfg.dax.use1.cache.amazonaws.com:8111</code></p>
+                                    <p>Example:
+                                       <code class="code">mydaxcluster.0h3d6x.clustercfg.dax.use1.cache.amazonaws.com:8111</code></p>
                                     
                                  </td>
                                  
@@ -797,7 +793,7 @@ Resources:
                                     
                                  </td>
                                  
-                              </tr>               
+                              </tr>
                               
                               <tr>
                                  
@@ -815,7 +811,8 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example: <code class="code">arn:aws:dynamodb:us-east-2:123456789012:table/myDynamoDBTable</code></p>
+                                    <p>Example:
+                                       <code class="code">arn:aws:dynamodb:us-east-2:123456789012:table/myDynamoDBTable</code></p>
                                     
                                  </td>
                                  
@@ -837,9 +834,8 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>The Amazon Resource Name (ARN) of the DynamoDB table stream. To use this
-                                       attribute, you must specify the DynamoDB table <code class="code">StreamSpecification</code>
-                                       property.
+                                    <p>The Amazon Resource Name (ARN) of the DynamoDB table stream. To use this attribute,
+                                       you must specify the DynamoDB table <code class="code">StreamSpecification</code> property.
                                     </p>
                                     
                                     <p>Example:
@@ -865,9 +861,8 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>The ID that AWS assigns to represent the allocation of the address for
-                                       use with Amazon VPC. It is returned only for VPC Elastic IP
-                                       addresses.
+                                    <p>The ID that AWS assigns to represent the allocation of the address for use with
+                                       Amazon VPC. It is returned only for VPC Elastic IP addresses.
                                     </p>
                                     
                                     <p>Example: <code class="code">eipalloc-5723d13e</code></p>
@@ -892,9 +887,7 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>The Availability Zone where the instance that you specified is
-                                       launched.
-                                    </p>
+                                    <p>The Availability Zone where the instance that you specified is launched.</p>
                                     
                                     <p>Example: <span><code class="code">us-east-1b</code></span></p>
                                     
@@ -1186,8 +1179,7 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>The <code class="code">NetworkAcl associationId</code> that is attached to a
-                                       subnet.
+                                    <p>The <code class="code">NetworkAcl associationId</code> that is attached to a subnet.
                                     </p>
                                     
                                  </td>
@@ -1258,8 +1250,8 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>The default network ACL ID that is associated with the VPC, which AWS
-                                       creates when you create a VPC.
+                                    <p>The default network ACL ID that is associated with the VPC, which AWS creates
+                                       when you create a VPC.
                                     </p>
                                     
                                     <p>Example: <code class="code">acl-814dafe3</code></p>
@@ -1284,8 +1276,8 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>The default security group ID that is associated with the VPC, which
-                                       AWS creates when you create a VPC.
+                                    <p>The default security group ID that is associated with the VPC, which AWS
+                                       creates when you create a VPC.
                                     </p>
                                     
                                     <p>Example: <code class="code">sg-b178e0d3</code></p>
@@ -1334,7 +1326,8 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example: <code class="code">arn:aws:ecr:us-east-2:123456789012:repository/test-repository</code></p>
+                                    <p>Example:
+                                       <code class="code">arn:aws:ecr:us-east-2:123456789012:repository/test-repository</code></p>
                                     
                                  </td>
                                  
@@ -1356,7 +1349,8 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example: <code class="code">arn:aws:ecs:us-east-2:123456789012:cluster/MyECSCluster</code></p>
+                                    <p>Example:
+                                       <code class="code">arn:aws:ecs:us-east-2:123456789012:cluster/MyECSCluster</code></p>
                                     
                                  </td>
                                  
@@ -1404,11 +1398,13 @@ Resources:
                                     
                                     <p>The ARN of the cluster.</p>
                                     
-                                    <p>Example: <code class="code">arn:aws:eks:us-east-2:123456789012:cluster/MyECSCluster</code></p>
+                                    <p>Example:
+                                       <code class="code">arn:aws:eks:us-east-2:123456789012:cluster/MyECSCluster</code></p>
                                     
                                  </td>
                                  
                               </tr>
+                              
                               <tr>
                                  
                                  <td>
@@ -1431,6 +1427,7 @@ Resources:
                                  </td>
                                  
                               </tr>
+                              
                               <tr>
                                  
                                  <td>
@@ -1449,7 +1446,8 @@ Resources:
                                     
                                     <p>The endpoint for your Kubernetes API server.</p>
                                     
-                                    <p>Example: <code class="code">https://EXAMPLEFBBB3BA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com</code></p>
+                                    <p>Example:
+                                       <code class="code">https://EXAMPLEFBBB3BA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com</code></p>
                                     
                                  </td>
                                  
@@ -1475,8 +1473,7 @@ Resources:
                                        cluster.
                                     </p>
                                     
-                                    <p>Example:
-                                       <code class="code">test.abc12a.cfg.use1.cache.amazonaws.com:11111</code></p>
+                                    <p>Example: <code class="code">test.abc12a.cfg.use1.cache.amazonaws.com:11111</code></p>
                                     
                                  </td>
                                  
@@ -1526,8 +1523,7 @@ Resources:
                                        cluster.
                                     </p>
                                     
-                                    <p>Example:
-                                       <code class="code">test.abc12a.cfg.use1.cache.amazonaws.com:11111</code></p>
+                                    <p>Example: <code class="code">test.abc12a.cfg.use1.cache.amazonaws.com:11111</code></p>
                                     
                                  </td>
                                  
@@ -1639,9 +1635,7 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>The port number that the primary read-write cache engine is listening
-                                       on.
-                                    </p>
+                                    <p>The port number that the primary read-write cache engine is listening on.</p>
                                     
                                  </td>
                                  
@@ -1663,13 +1657,12 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>A string with a list of endpoints for the read-only replicas. The order
-                                       of the addresses maps to the order of the ports from the
-                                       <code class="code">ReadEndPoint.Ports</code> attribute.
+                                    <p>A string with a list of endpoints for the read-only replicas. The order of the
+                                       addresses maps to the order of the ports from the <code class="code">ReadEndPoint.Ports</code>
+                                       attribute.
                                     </p>
                                     
-                                    <p>Example:
-                                       <code class="code">&quot;[abc12xmy3d1w3hv6-001.rep12a.0001.use1.cache.amazonaws.com,
+                                    <p>Example: <code class="code">&quot;[abc12xmy3d1w3hv6-001.rep12a.0001.use1.cache.amazonaws.com,
                                           abc12xmy3d1w3hv6-002.rep12a.0001.use1.cache.amazonaws.com,
                                           abc12xmy3d1w3hv6-003.rep12a.0001.use1.cache.amazonaws.com]&quot;</code></p>
                                     
@@ -1693,9 +1686,9 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>A string with a list of ports for the read-only replicas. The order of
-                                       the ports maps to the order of the addresses from the
-                                       <code class="code">ReadEndPoint.Addresses</code> attribute.
+                                    <p>A string with a list of ports for the read-only replicas. The order of the ports
+                                       maps to the order of the addresses from the <code class="code">ReadEndPoint.Addresses</code>
+                                       attribute.
                                     </p>
                                     
                                     <p>Example: <code class="code">&quot;[6379, 6379, 6379]&quot;</code></p>
@@ -1722,8 +1715,7 @@ Resources:
                                     
                                     <p>A list of endpoints for the read-only replicas.</p>
                                     
-                                    <p>Example:
-                                       <code class="code">[&quot;abc12xmy3d1w3hv6-001.rep12a.0001.use1.cache.amazonaws.com&quot;,
+                                    <p>Example: <code class="code">[&quot;abc12xmy3d1w3hv6-001.rep12a.0001.use1.cache.amazonaws.com&quot;,
                                           &quot;abc12xmy3d1w3hv6-002.rep12a.0001.use1.cache.amazonaws.com&quot;,
                                           &quot;abc12xmy3d1w3hv6-003.rep12a.0001.use1.cache.amazonaws.com&quot;]</code></p>
                                     
@@ -1874,8 +1866,8 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>The security group that you can use as part of your inbound rules for
-                                       your load balancer&apos;s back-end Amazon EC2 application instances.
+                                    <p>The security group that you can use as part of your inbound rules for your load
+                                       balancer&apos;s back-end Amazon EC2 application instances.
                                     </p>
                                     
                                     <p>Example: <code class="code">amazon-elb</code></p>
@@ -2047,8 +2039,8 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>The Amazon Resource Names (ARNs) of the load balancers that route traffic
-                                       to this target group.
+                                    <p>The Amazon Resource Names (ARNs) of the load balancers that route traffic to
+                                       this target group.
                                     </p>
                                     
                                     <p>Example: <code class="code">[
@@ -2095,7 +2087,7 @@ Resources:
                                  </td>
                                  
                                  <td>The name of the target group.
-                                    <p>Example: 
+                                    <p>Example:
                                        <code class="code">my-target-group</code></p>
                                  </td>
                                  
@@ -2142,8 +2134,8 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>The domain-specific endpoint that is used to submit index, search, and
-                                       data upload requests to an Amazon Elasticsearch Service domain.
+                                    <p>The domain-specific endpoint that is used to submit index, search, and data
+                                       upload requests to an Amazon Elasticsearch Service domain.
                                     </p>
                                     
                                     <p>Example:
@@ -2171,8 +2163,7 @@ Resources:
                                     
                                     <p>The public DNS name of the master node (instance).</p>
                                     
-                                    <p>Example:
-                                       <code class="code">ec2-12-123-123-123.us-west-2.compute.amazonaws.com</code></p>
+                                    <p>Example: <code class="code">ec2-12-123-123-123.us-west-2.compute.amazonaws.com</code></p>
                                     
                                  </td>
                                  
@@ -2288,8 +2279,7 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example:
-                                       <code class="code">arn:aws:iam::1234567890:role/MyRole-AJJHDSKSDF</code></p>
+                                    <p>Example: <code class="code">arn:aws:iam::1234567890:role/MyRole-AJJHDSKSDF</code></p>
                                     
                                  </td>
                                  
@@ -2349,7 +2339,8 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example: <code class="code">arn:aws:iot:us-east-2:123456789012:policy/MyIoTPolicy</code></p>
+                                    <p>Example:
+                                       <code class="code">arn:aws:iot:us-east-2:123456789012:policy/MyIoTPolicy</code></p>
                                     
                                  </td>
                                  
@@ -2371,7 +2362,180 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example: <code class="code">arn:aws:iot:us-east-2:123456789012:rule/MyIoTRule</code></p>
+                                    <p>Example:
+                                       <code class="code">arn:aws:iot:us-east-2:123456789012:rule/MyIoTRule</code></p>
+                                    
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p><a href="aws-resource-iot1click-device.html">AWS::IoT1Click::Device</a></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p><code class="code">Arn</code></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p>The ARN of the AWS IoT 1-Click compatible device.</p>
+                                    
+                                    <p>Example:
+                                       <code class="code">arn:aws:iot1click:us-west-2:123456789012:devices/G030PX0312744DWM</code></p>
+                                    
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p><a href="aws-resource-iot1click-device.html">AWS::IoT1Click::Device</a></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p><code class="code">DeviceId</code></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p>The user specified device ID.</p>
+                                    
+                                    <p>Example: <code class="code">G030PX0312744DWM</code></p>
+                                    
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p><a href="aws-resource-iot1click-device.html">AWS::IoT1Click::Device</a></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p><code class="code">Enabled</code></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p>A Boolean value indicating if the device is enabled (<code class="code">true</code>) or
+                                       disabled (<code class="code">false</code>).
+                                    </p>
+                                    
+                                    <p>Example: <code class="code">true</code></p>
+                                    
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p><a href="aws-resource-iot1click-placement.html">AWS::IoT1Click::Placement</a></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p><code class="code">PlacementName</code></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p>The placement name associated with a project.</p>
+                                    
+                                    <p>Example: <code class="code">region27</code></p>
+                                    
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p><a href="aws-resource-iot1click-placement.html">AWS::IoT1Click::Placement</a></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p><code class="code">ProjectName</code></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p>The name of the project for a given placement.</p>
+                                    
+                                    <p>Example: <code class="code">seattle-region</code></p>
+                                    
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p><a href="aws-resource-iot1click-project.html">AWS::IoT1Click::Project</a></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p><code class="code">ProjectName</code></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p>The name of the project.</p>
+                                    
+                                    <p>Example: <code class="code">seattle-region</code></p>
+                                    
+                                 </td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>
+                                    
+                                    <p><a href="aws-resource-iot1click-project.html">AWS::IoT1Click::Project</a></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p><code class="code">Arn</code></p>
+                                    
+                                 </td>
+                                 
+                                 <td>
+                                    
+                                    <p>The ARN of the project.</p>
+                                    
+                                    <p>Example:
+                                       <code class="code">arn:aws:iot1click:us-east-1:123456789012:projects/seattle-region</code></p>
                                     
                                  </td>
                                  
@@ -2393,7 +2557,7 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example: 
+                                    <p>Example:
                                        <code class="code">arn:aws:kinesis:</code><span><code class="code">us-east-2</code></span><code class="code">:123456789012:stream/stream-name</code></p>
                                     
                                  </td>
@@ -2509,7 +2673,8 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example: <code class="code">arn:aws:logs:us-east-2:123456789012:destination:MyDestination</code></p>
+                                    <p>Example:
+                                       <code class="code">arn:aws:logs:us-east-2:123456789012:destination:MyDestination</code></p>
                                     
                                  </td>
                                  
@@ -2650,7 +2815,8 @@ Resources:
                                     <div class="aws-note">
                                        <p class="aws-note">Note</p>
                                        <p>To use this attribute, the AWS OpsWorks instance must be in an AWS OpsWorks layer
-                                          that auto-assigns public IP addresses.
+                                          that
+                                          auto-assigns public IP addresses.
                                        </p>
                                     </div>
                                     
@@ -2794,7 +2960,8 @@ Resources:
                                     
                                     <p>The reader endpoint for the DB cluster.</p>
                                     
-                                    <p>Example: <code class="code">mystack-mydbcluster-ro-1apw1j4phylrk.cg034hpkmmjt.</code><span><code class="code">us-east-2</code></span><code class="code">.rds.amazonaws.com</code></p>
+                                    <p>Example:
+                                       <code class="code">mystack-mydbcluster-ro-1apw1j4phylrk.cg034hpkmmjt.</code><span><code class="code">us-east-2</code></span><code class="code">.rds.amazonaws.com</code></p>
                                     
                                  </td>
                                  
@@ -2891,8 +3058,7 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example:
-                                       <code class="code">arn:aws:s3:::mybucket</code></p>
+                                    <p>Example: <code class="code">arn:aws:s3:::mybucket</code></p>
                                     
                                  </td>
                                  
@@ -2916,8 +3082,7 @@ Resources:
                                     
                                     <p>The DNS name of the specified bucket.</p>
                                     
-                                    <p>Example:
-                                       <code class="code">mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com</code></p>
+                                    <p>Example: <code class="code">mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com</code></p>
                                     
                                  </td>
                                  
@@ -3012,8 +3177,7 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example:
-                                       	<code class="code">ns-t2kl4fs6xexample</code></p>
+                                    <p>Example: <code class="code">ns-t2kl4fs6xexample</code></p>
                                     
                                  </td>
                                  
@@ -3036,7 +3200,7 @@ Resources:
                                  <td>
                                     
                                     <p>Example:
-                                       	<code class="code">arn:aws:servicediscovery:us-west-2:1234567890:namespace/ns-t2kl4fs6xexample</code></p>
+                                       <code class="code">arn:aws:servicediscovery:us-west-2:1234567890:namespace/ns-t2kl4fs6xexample</code></p>
                                     
                                  </td>
                                  
@@ -3058,8 +3222,7 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example:
-                                       	<code class="code">ns-d6wz3hq6kexample</code></p>
+                                    <p>Example: <code class="code">ns-d6wz3hq6kexample</code></p>
                                     
                                  </td>
                                  
@@ -3082,7 +3245,7 @@ Resources:
                                  <td>
                                     
                                     <p>Example:
-                                       	<code class="code">arn:aws:servicediscovery:us-west-2:1234567890:namespace/ns-d6wz3hq6kexample</code></p>
+                                       <code class="code">arn:aws:servicediscovery:us-west-2:1234567890:namespace/ns-d6wz3hq6kexample</code></p>
                                     
                                  </td>
                                  
@@ -3104,8 +3267,7 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example:
-                                       	<code class="code">srv-7dfj3r6cyexample</code></p>
+                                    <p>Example: <code class="code">srv-7dfj3r6cyexample</code></p>
                                     
                                  </td>
                                  
@@ -3128,7 +3290,7 @@ Resources:
                                  <td>
                                     
                                     <p>Example:
-                                       	<code class="code">arn:aws:servicediscovery:us-west-2:1234567890:service/srv-7dfj3r6cyexample</code></p>
+                                       <code class="code">arn:aws:servicediscovery:us-west-2:1234567890:service/srv-7dfj3r6cyexample</code></p>
                                     
                                  </td>
                                  
@@ -3150,8 +3312,7 @@ Resources:
                                  
                                  <td>
                                     
-                                    <p>Example:
-                                       <code class="code">example</code></p>
+                                    <p>Example: <code class="code">example</code></p>
                                     
                                  </td>
                                  

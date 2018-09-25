@@ -10,12 +10,14 @@
     <div id="content" style="padding: 10px 30px;">
     <h1 class="topictitle" id="aws-properties-apitgateway-method-integration">Amazon API Gateway Method Integration</h1><p><code class="code">Integration</code> is a property of the <a href="aws-resource-apigateway-method.html">AWS::ApiGateway::Method</a> resource that specifies information about the
                         target backend that an Amazon API Gateway (API Gateway) method calls.
-                     </p><h2 id="w2ab1c21c14c35b7">Syntax</h2><div id="JSON" name="JSON" class="section langfilter">
+                     </p><h2 id="w2ab1c21c14c41b5">Syntax</h2><div id="JSON" name="JSON" class="section langfilter">
                         <h3 id="aws-properties-apitgateway-method-integration-syntax.json">JSON</h3>
                         
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">{
   &quot;<a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-cachekeyparameters">CacheKeyParameters</a>&quot; : [ <em class="replaceable"><code>String, ...</code></em> ],
   &quot;<a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-cachenamespace">CacheNamespace</a>&quot; : <em class="replaceable"><code>String</code></em>,
+  &quot;<a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-connectionid">ConnectionId</a>&quot; : <em class="replaceable"><code>String</code></em>,
+  &quot;<a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-connectiontype">ConnectionType</a>&quot; : <em class="replaceable"><code>String</code></em>,
   &quot;<a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-contenthandling">ContentHandling</a>&quot; : <em class="replaceable"><code>String</code></em>,
   &quot;<a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-credentials">Credentials</a>&quot; : <em class="replaceable"><code>String</code></em>,
   &quot;<a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-integrationhttpmethod">IntegrationHttpMethod</a>&quot; : <em class="replaceable"><code>String</code></em>,
@@ -23,6 +25,7 @@
   &quot;<a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-passthroughbehavior">PassthroughBehavior</a>&quot; : <em class="replaceable"><code>String</code></em>,
   &quot;<a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-requestparameters">RequestParameters</a>&quot; : { <em class="replaceable"><code>String</code></em>:<em class="replaceable"><code>String, ...</code></em> },
   &quot;<a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-requesttemplates">RequestTemplates</a>&quot; : { <em class="replaceable"><code>String</code></em>:<em class="replaceable"><code>String, ...</code></em> },
+  &quot;<a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-timeoutinmillis">TimeoutInMillis</a>&quot; : <em class="replaceable"><code>Integer</code></em>,
   &quot;<a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-type">Type</a>&quot; : <em class="replaceable"><code>String</code></em>,
   &quot;<a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-uri">Uri</a>&quot; : <em class="replaceable"><code>String</code></em>
 }</code></pre>
@@ -32,6 +35,8 @@
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight"><a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-cachekeyparameters">CacheKeyParameters</a>:
   - <em class="replaceable"><code>String</code></em>
 <a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-cachenamespace">CacheNamespace</a>: <em class="replaceable"><code>String</code></em>
+<a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-connectionid">ConnectionId</a>: <em class="replaceable"><code>String</code></em>
+<a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-connectiontype">ConnectionType</a>: <em class="replaceable"><code>String</code></em>
 <a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-contenthandling">ContentHandling</a>: <em class="replaceable"><code>String</code></em>
 
 <a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-credentials">Credentials</a>: <em class="replaceable"><code>String</code></em>
@@ -44,9 +49,16 @@
 <a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-requesttemplates">RequestTemplates</a>:
   <em class="replaceable"><code>String</code></em>: <em class="replaceable"><code>String</code></em>
 <a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-type">Type</a>: <em class="replaceable"><code>String</code></em>
+<a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-timeoutinmillis">TimeoutInMillis</a>: <em class="replaceable"><code>Integer</code></em>
 <a href="aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-uri">Uri</a>: <em class="replaceable"><code>String</code></em>
 </code></pre>
-                        </div><h2 id="w2ab1c21c14c35b9">Properties</h2><div class="variablelist">
+                        </div><h2 id="w2ab1c21c14c41b7">Properties</h2><div class="variablelist">
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -130,6 +142,44 @@
                               
                               <p><em>Update requires</em>: 
                                  <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>
+                              
+                           </dd>
+                           
+                           
+                           <dt><a id="cfn-apigateway-method-integration-connectionid"></a><span class="term"><code class="code">ConnectionId</code></span></dt>
+                           
+                           <dd>
+                              
+                              <p>The ID of the VpcLink used for the integration when <code class="code">connectionType=VPC_LINK</code> and undefined, otherwise.
+                              </p>
+                              
+                              <p><em>Required</em>: No
+                              </p>
+                              
+                              <p><em>Type</em>: String
+                              </p>
+                              
+                              <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>
+                              
+                           </dd>
+                           
+                           
+                           <dt><a id="cfn-apigateway-method-integration-connectiontype"></a><span class="term"><code class="code">ConnectionType</code></span></dt>
+                           
+                           <dd>
+                              
+                              <p>The type of the network connection to the integration endpoint. The valid value is
+                                 <code class="code">INTERNET</code> for connections through the public routable internet or <code class="code">VPC_LINK </code> for private connections between API Gateway and a network load balancer in a VPC.
+                                 The default value is <code class="code">INTERNET</code>.
+                              </p>
+                              
+                              <p><em>Required</em>: No
+                              </p>
+                              
+                              <p><em>Type</em>: String
+                              </p>
+                              
+                              <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>
                               
                            </dd>
                            
@@ -272,6 +322,25 @@
                               
                               <p><em>Type</em>: Mapping of key-value pairs
                               </p>
+                              
+                           </dd>
+                           
+                           
+                           <dt><a id="cfn-apigateway-method-integration-timeoutinmillis"></a><span class="term"><code class="code">TimeoutInMillis</code></span></dt>
+                           
+                           <dd>
+                              
+                              <p>Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds
+                                 or 29 seconds.
+                              </p>
+                              
+                              <p><em>Required</em>: No
+                              </p>
+                              
+                              <p><em>Type</em>: Integer
+                              </p>
+                              
+                              <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>
                               
                            </dd>
                            

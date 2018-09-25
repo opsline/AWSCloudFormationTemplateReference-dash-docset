@@ -9,15 +9,17 @@
 <body>
     <div id="content" style="padding: 10px 30px;">
     <h1 class="topictitle" id="aws-properties-apigateway-deployment-stagedescription">Amazon API Gateway Deployment StageDescription</h1><p><code class="code">StageDescription</code> is a property of the <a href="aws-resource-apigateway-deployment.html">AWS::ApiGateway::Deployment</a> resource that configures an Amazon API Gateway (API Gateway) deployment stage.
-                     </p><h2 id="w2ab1c21c14c25b5">Syntax</h2><div id="JSON" name="JSON" class="section langfilter">
+                     </p><h2 id="w2ab1c21c14c31b5">Syntax</h2><div id="JSON" name="JSON" class="section langfilter">
                         <h3 id="aws-properties-apigateway-deployment-stagedescription-syntax.json">JSON</h3>
                         
                         <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight">{
+  &quot;<a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-accesslogsetting">AccessLogSetting</a>&quot; : <em class="replaceable"><code><a href="aws-properties-apigateway-deployment-accesslogsetting.html">AccessLogSetting</a></code></em>,
   &quot;<a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cacheclusterenabled">CacheClusterEnabled</a>&quot; : <em class="replaceable"><code>Boolean</code></em>,
   &quot;<a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cacheclustersize">CacheClusterSize</a>&quot; : <em class="replaceable"><code>String</code></em>,
   &quot;<a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cachedataencrypted">CacheDataEncrypted</a>&quot; : <em class="replaceable"><code>Boolean</code></em>,
   &quot;<a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cachettlinseconds">CacheTtlInSeconds</a>&quot; : <em class="replaceable"><code>Integer</code></em>,
   &quot;<a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cachingenabled">CachingEnabled</a>&quot; : <em class="replaceable"><code>Boolean</code></em>,
+  &quot;<a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-canarysetting">CanarySetting</a>&quot; : <em class="replaceable"><code><a href="aws-properties-apigateway-deployment-canarysetting.html">CanarySetting</a></code></em>,
   &quot;<a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-clientcertificateid">ClientCertificateId</a>&quot; : <em class="replaceable"><code>String</code></em>,
   &quot;<a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-datatraceenabled">DataTraceEnabled</a>&quot; : <em class="replaceable"><code>Boolean</code></em>,
   &quot;<a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-description">Description</a>&quot; : <em class="replaceable"><code>String</code></em>,
@@ -32,11 +34,13 @@
                         </div><div id="YAML" name="YAML" class="section langfilter">
                         <h3 id="aws-properties-apigateway-deployment-stagedescription-syntax.yaml">YAML</h3>
                         
-                        <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight"><a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cacheclusterenabled">CacheClusterEnabled</a>: <em class="replaceable"><code>Boolean</code></em>
+                        <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"></div><div class="btn-dark-theme" title="Dark theme" title-dark="Dark theme" title-light="Light theme"></div></div><code class="nohighlight"><a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-accesslogsetting">AccessLogSetting</a>: <em class="replaceable"><code><a href="aws-properties-apigateway-deployment-accesslogsetting.html">AccessLogSetting</a></code></em>
+<a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cacheclusterenabled">CacheClusterEnabled</a>: <em class="replaceable"><code>Boolean</code></em>
 <a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cacheclustersize">CacheClusterSize</a>: <em class="replaceable"><code>String</code></em>
 <a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cachedataencrypted">CacheDataEncrypted</a>: <em class="replaceable"><code>Boolean</code></em>
 <a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cachettlinseconds">CacheTtlInSeconds</a>: <em class="replaceable"><code>Integer</code></em>
 <a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cachingenabled">CachingEnabled</a>: <em class="replaceable"><code>Boolean</code></em>
+<a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-canarysetting">CanarySetting</a>: <em class="replaceable"><code><a href="aws-properties-apigateway-deployment-canarysetting.html">CanarySetting</a></code></em>
 <a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-clientcertificateid">ClientCertificateId</a>: <em class="replaceable"><code>String</code></em>
 <a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-datatraceenabled">DataTraceEnabled</a>: <em class="replaceable"><code>Boolean</code></em>
 <a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-description">Description</a>: <em class="replaceable"><code>String</code></em>
@@ -49,11 +53,17 @@
 <a href="aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-variables">Variables</a>:
   <em class="replaceable"><code>String</code></em>: <em class="replaceable"><code>String</code></em>
 </code></pre>
-                        </div><h2 id="w2ab1c21c14c25b7">Properties</h2><div class="variablelist">
+                        </div><h2 id="w2ab1c21c14c31b7">Properties</h2><div class="variablelist">
+                        
+                           
                         
                         
                         
                         
+                        
+                        
+                        
+                           
                         
                         
                         
@@ -68,6 +78,22 @@
                         
                         
                         <dl>
+                           
+                           <dt><a id="cfn-apigateway-deployment-stagedescription-accesslogsetting"></a><span class="term"><code class="code">AccessLogSetting</code></span></dt>
+                           
+                           <dd>
+                              
+                              <p>Specifies settings for logging access in this stage.</p>
+                              
+                              <p><em>Required</em>: No
+                              </p>
+                              
+                              <p><em>Type</em>: <a href="aws-properties-apigateway-deployment-accesslogsetting.html">API Gateway Deployment AccessLogSetting</a></p>
+                              
+                              <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>
+                              
+                           </dd>
+                           
                            
                            <dt><a id="cfn-apigateway-deployment-stagedescription-cacheclusterenabled"></a><span class="term"><code class="code">CacheClusterEnabled</code></span></dt>
                            
@@ -144,6 +170,22 @@
                               
                               <p><em>Type</em>: Boolean
                               </p>
+                              
+                           </dd>
+                           
+                           
+                           <dt><a id="cfn-apigateway-deployment-stagedescription-canarysetting"></a><span class="term"><code class="code">CanarySetting</code></span></dt>
+                           
+                           <dd>
+                              
+                              <p>Specifies settings for the canary deployment in this stage.</p>
+                              
+                              <p><em>Required</em>: No
+                              </p>
+                              
+                              <p><em>Type</em>: <a href="aws-properties-apigateway-deployment-canarysetting.html">API Gateway Deployment CanarySetting</a></p>
+                              
+                              <p><em>Update requires</em>: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt">No interruption</a></p>
                               
                            </dd>
                            

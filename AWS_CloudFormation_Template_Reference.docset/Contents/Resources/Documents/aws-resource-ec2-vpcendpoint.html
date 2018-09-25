@@ -17,9 +17,9 @@
                         <p><strong>Topics</strong></p>
                         <ul>
                            <li><a href="#aws-resource-ec2-vpcendpoint-syntax">Syntax</a></li>
-                           <li><a href="#w2ab1c21c10d534b9">Properties</a></li>
-                           <li><a href="#w2ab1c21c10d534c11">Return Value</a></li>
-                           <li><a href="#w2ab1c21c10d534c13">Example</a></li>
+                           <li><a href="#aws-resource-ec2-vpcendpoint-properties">Properties</a></li>
+                           <li><a href="#aws-resource-ec2-vpcendpoint-return-values">Return Value</a></li>
+                           <li><a href="#aws-resource-ec2-vpcendpoint-examples">Example</a></li>
                         </ul>
                      </div><h2 id="aws-resource-ec2-vpcendpoint-syntax">Syntax</h2><p>To declare this entity in your AWS CloudFormation template, use the following syntax:</p><div id="JSON" name="JSON" class="section langfilter">
                         <h3 id="aws-resource-ec2-vpcendpoint-syntax.json">JSON</h3>
@@ -54,7 +54,7 @@ Properties:
     - <em class="replaceable"><code>String</code></em>
   <a href="aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-securitygroupids">SecurityGroupIds</a>: 
     - <em class="replaceable"><code>String</code></em></code></pre>
-                        </div><h2 id="w2ab1c21c10d534b9">Properties</h2><div class="variablelist">
+                        </div><h2 id="aws-resource-ec2-vpcendpoint-properties">Properties</h2><div class="variablelist">
                         
                         
                         
@@ -246,11 +246,62 @@ Properties:
                            </dd>
                            
                         </dl>
-                     </div><h2 id="w2ab1c21c10d534c11">Return Value</h2><h3 id="w2ab1c21c10d534c11b3">Ref</h3><p>When you pass the logical ID of an <code class="code">AWS::EC2::VPCEndpoint</code> resource to the
+                     </div><h2 id="aws-resource-ec2-vpcendpoint-return-values">Return Value</h2><h3 id="aws-resource-ec2-vpcendpoint-ref">Ref</h3><p>When you pass the logical ID of an <code class="code">AWS::EC2::VPCEndpoint</code> resource to the
                         intrinsic <code class="code">Ref</code> function, the function returns the endpoint ID, such
                         as <code class="code">vpce-a123d0d1</code>.
                      </p><p>For more information about using the <code class="code">Ref</code> function, see <a href="intrinsic-function-reference-ref.html">Ref</a>.
-                     </p><h2 id="w2ab1c21c10d534c13">Example</h2><p>The following example creates a VPC endpoint that allows only the
+                     </p><h3 id="aws-resource-ec2-vpcendpoint-getatt">Fn::GetAtt</h3><p><code class="code">Fn::GetAtt</code> returns a value for a specified attribute of this type.
+                        The following are the available attributes and sample return values.
+                     </p><div class="variablelist">
+                        
+                        
+                        
+                        
+                        <dl>
+                           
+                           <dt><span class="term"><code class="literal">CreationTimestamp</code></span></dt>
+                           
+                           <dd>
+                              
+                              <p><em>Returns</em>: The date and time the VPC endpoint was created. For example: <code class="code">2018-09-13T04:46:12.271Z</code></p>
+                              
+                           </dd>
+                           
+                           
+                           <dt><span class="term"><code class="literal">DnsEntries</code></span></dt>
+                           
+                           <dd>
+                              
+                              <p><em>Returns</em>: (Interface endpoint) A list of the DNS entries for
+                                 the endpoint. Each entry is a combination of the hosted zone ID and the DNS name.
+                                 In
+                                 the first entry in the list below, for example, <code class="code">Z1C12344VYDITB0</code> is the hosted zone ID and <code class="code">ec2.us-east-1.amazonaws.com</code> is the DNS name. Note that if you update the <code class="code">PrivateDnsEnabled</code> or <code class="code">SubnetIds</code> properties, the order of DNS entries in this list may change as well.
+                              </p>
+                              
+                              <p>For example: </p>
+                              
+                              <p><code class="code">[ &quot;Z1C12344VYDITB0:ec2.us-east-1.amazonaws.com&quot;,
+                                    &quot;Z1HUB23UULQXV:vpce-01abc23456de78f9g-12abccd3.ec2.us-east-1.vpce.amazonaws.com&quot;]</code></p>
+                              
+                           </dd>
+                           
+                           
+                           <dt><span class="term"><code class="literal">NetworkInterfaceIds</code></span></dt>
+                           
+                           <dd>
+                              
+                              <p><em>Returns</em>: (Interface endpoint) A list of one or more network
+                                 interfaces for the endpoint. For example: 
+                              </p>
+                              
+                              <p><code class="code">[ &quot;eni-12345ab6789c10d1e&quot;,
+                                    &quot;eni-012345678ab9c10d1&quot; ]</code></p>
+                              
+                           </dd>
+                           
+                        </dl>
+                     </div><p>For more information about using <code class="code">Fn::GetAtt</code>, see <a href="intrinsic-function-reference-getatt.html">Fn::GetAtt</a>.
+                     </p><h2 id="aws-resource-ec2-vpcendpoint-examples">Example</h2><p>The following example creates a VPC endpoint that allows only the
                         <code class="code">s3:GetObject</code> action on the <code class="code">examplebucket</code> bucket. Traffic to S3
                         within subnets that are associated with the <code class="code">routetableA</code> and
                         <code class="code">routetableB</code> route tables is automatically routed through the VPC

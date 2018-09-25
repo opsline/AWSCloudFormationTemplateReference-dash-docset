@@ -398,14 +398,14 @@ Resources:
     &quot;SourceSG&quot;: {
       &quot;Type&quot;: &quot;AWS::EC2::SecurityGroup&quot;,
       &quot;Properties&quot;: {
-        &quot;VpcId&quot; : &quot;vpc-e063f789&quot;,
+        &quot;VpcId&quot; : &quot;vpc-1a2b3c4d&quot;,
         &quot;GroupDescription&quot;: &quot;Sample source security group&quot;
       }
     },
     &quot;TargetSG&quot;: {
       &quot;Type&quot;: &quot;AWS::EC2::SecurityGroup&quot;,
       &quot;Properties&quot;: {
-        &quot;VpcId&quot; : &quot;vpc-e063f789&quot;,
+        &quot;VpcId&quot; : &quot;vpc-1a2b3c4d&quot;,
         &quot;GroupDescription&quot;: &quot;Sample target security group&quot;
       }
     },
@@ -459,12 +459,12 @@ Resources:
   SourceSG:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      VpcId: vpc-e063f789
+      VpcId: vpc-1a2b3c4d
       GroupDescription: Sample source security group
   TargetSG:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      VpcId: vpc-e063f789
+      VpcId: vpc-1a2b3c4d
       GroupDescription: Sample target security group
   OutboundRule:
     Type: AWS::EC2::SecurityGroupEgress
@@ -521,7 +521,7 @@ Resources:
         &quot;TargetSG&quot;: {
             &quot;Type&quot;: &quot;AWS::EC2::SecurityGroup&quot;,
             &quot;Properties&quot;: {
-                &quot;VpcId&quot;: &quot;vpc-e063f789&quot;,
+                &quot;VpcId&quot;: &quot;vpc-1a2b3c4d&quot;,
                 &quot;GroupDescription&quot;: &quot;Security group allowing ingress for security scanners&quot;
             }
         },
@@ -550,7 +550,7 @@ Resources:
   TargetSG:
     Type: &apos;AWS::EC2::SecurityGroup&apos;
     Properties:
-      VpcId: vpc-e063f789
+      VpcId: vpc-1a2b3c4d
       GroupDescription: Security group allowing ingress for security scanners
   InboundRule:
     Type: &apos;AWS::EC2::SecurityGroupIngress&apos;
